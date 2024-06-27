@@ -9,56 +9,44 @@ const Loginc = () => {
   const Navegar = useNavigate();
   const perrito = async () => {
     //ejecuta la funcion perrito de el boton'
-    let inicioExitoso = await loginUser();
-    inicioExitoso.forEach((e) => {
-      if (user === e.user && password === e.password) {
+    let inicioExitoso = await loginUser(); // obtiene los datos de el api
+    let validarInicio = false
+    inicioExitoso.forEach((e) => {// for de el api para buscar los usuarios existentes
+      if (user === e.user && password === e.password) {// si el usuario y contraseña es correcto
+        //crea un token el local y me dirige a la pagina
         localStorage.setItem("token", true);
-        alert("Inicio Exitoso")
+        validarInicio = true
         setTimeout(() => {
-             Navegar("/todo");
-        }, 1000);
-       
-      } else {
-        return false;
-      }
+          Navegar("/home");
+        }, 2000);
+        //me retorna un true a validarInicio para que tire la alerta
+      } 
     });
+    if (validarInicio) {
+      alert("Inicio Exitoso! Por favor espere.")
+      
+    }
+    
   };
   return (
     <>
-      <div id="nav-txt">
-        <h3 id="inicio">Inicio</h3>
-        <h3 id="sesion">Iniciar Sesion</h3>
+
+    <div className="containerLogin">
+      <div>
+        <h3>Iniciar Sesion</h3>
       </div>
-      <div id="grid-inp">
-        <input
-          id="inp1"
-          type="text"
-          placeholder="User"
-          value={user}
-          onChange={(e) => Cambiar1(e.target.value)}
-        />
+      <div>
+        <label className="labelLogin" htmlFor="">User name</label><br /><br />
+        <input className="inpTxt" type="text" placeholder="User" value={user} onChange={(e) => Cambiar1(e.target.value)} /><br /><br /><br />
         {/* // en el onChnage cambiar1 se llama y se ejecuta que a setValue, que setvalue es lo que se va a setear del input // setValue(e.target.value); */}
-        <input
-          id="inp2"
-          type="text"
-          name="name"
-          placeholder="password"
-          value={password}
-          onChange={(e) => Cambiar2(e.target.value)}
-        />
-        <br />
-        <br />
-        <input
-          id="btnLogin"
-          type="button"
-          value="Iniciar Sesion"
-          onClick={perrito} // funcion para el boton
-        />
-        <br />
-        <button>
-          <Link to="/register">Register</Link>
-        </button>
+        <label className="labelLogin" htmlFor="">Password</label><br /><br />
+        <input className="inpTxt" type="text"  name="name" placeholder="password"  value={password}  onChange={(e) => Cambiar2(e.target.value)} /> <br /><br /><br />
+        <input className="btnLogin" type="button" value="Iniciar Sesion" onClick={perrito}  /><br /><br />
+        {/* // funcion para el boton */}
+        <button className="btnLogin"><Link className="btnRyL" to="/register"> Ir a registrarse</Link></button>
       </div>
+    </div>
+
     </>
   );
 };

@@ -18,7 +18,7 @@ const Rutas = () => {
           <Route path="/register" element={<Singin />} />
           <Route path="/error" element={<PaginaError/>}/>
           <Route path="/*" element={<PaginaError/>}/>
-          <Route path="/todo" element={<PaginaPriv>
+          <Route path="/home" element={<PaginaPriv>
             <Home/>
             </PaginaPriv>}/>
         </Routes>
