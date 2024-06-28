@@ -4,6 +4,7 @@ import Rutas from './routes/rutas'
 function App() {
   return (
     <>
+    
      <Rutas/>
     </>
   )

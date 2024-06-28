@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { loginUser } from "../services/Api copy";
+import { loginUser } from "../../services/Api copy";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "../register/singinc.css"
 const Loginc = () => {
   const [user, Cambiar1] = useState(); //se definen los valores de cambiar1 y cambiar2 como onChanmge
   const [password, Cambiar2] = useState(); //en una constante se pone el value de el input y el setvalue es para que lo setee

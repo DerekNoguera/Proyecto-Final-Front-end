@@ -1,4 +1,4 @@
-import Singinc from "../components/singinc"
+import Singinc from "../components/register/singinc"
 
 function singin() {
   return (
