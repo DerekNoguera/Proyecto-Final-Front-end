@@ -1,4 +1,4 @@
-import Loginc from "../components/loginc"
+import Loginc from "../components/login/loginc"
 
 function Login() {
   return (

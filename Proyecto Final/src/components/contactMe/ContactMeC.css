@@ -1,0 +1,70 @@
+.body1 {
+  width: 1280px;
+  height: 550px;
+  display: grid;
+  place-items: center;
+  /* background-color: red; */
+}
+.Container {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 700px;
+  height: 500px;
+  backdrop-filter: blur(10px);
+}
+.ContainerContactme {
+  margin-top: 1%;
+  margin-left: 100px;
+  width: 500px;
+  height: auto;
+  backdrop-filter: blur(10px);
+}
+.containerMenor {
+  padding-top: 10%;
+}
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.grid3 {
+  align-items: center;
+  /* background-color: blue; */
+  margin-top: 5%;
+  height: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+.inpTxt1 {
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.inpTxt1:focus {
+  outline: none;
+}
+.inpTxt2 {
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.inpTxt2:focus {
+  outline: none;
+}
+.boton {
+  font-size: 12px;
+  border: transparent;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  height: 30px;
+  width: 110px;
+}
+.GraciasTxt {
+  margin-top: 11px;
+  margin-left: 10%;
+  /* background-color: red; */
+}

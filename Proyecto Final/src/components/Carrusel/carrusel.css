@@ -1,0 +1,14 @@
+.Carrusel{
+    /* z-index: -1;
+    margin-top: -5%; */
+    height: 400px;
+    width: 100%;
+}
+.CorruselItems{
+    height: 500px;
+}
+.d-block{
+   width: 100%;
+   height: 400px;
+   object-fit: cover;
+}

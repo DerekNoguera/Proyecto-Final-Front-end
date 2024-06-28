@@ -4,6 +4,8 @@ import Singin from "../pages/singin";
 import Home from "../pages/home";
 import PaginaError from "../components/paginaError";
 import PaginaPriv from "../components/paginaPriv";
+import AboutMe from "../pages/aboutMe";
+import Contactanos from "../pages/Contactanos";
 
 
 // import { Auth0Provider } from '@auth0/auth0-react';
@@ -20,7 +22,9 @@ const Rutas = () => {
           <Route path="/*" element={<PaginaError/>}/>
           <Route path="/home" element={<PaginaPriv>
             <Home/>
-            </PaginaPriv>}/>
+          </PaginaPriv>}/>
+          <Route path="/aboutMe" element={<AboutMe/>}/>
+          <Route path="/Contactanos" element={<Contactanos/>}/>
         </Routes>
       </Router>
     </>

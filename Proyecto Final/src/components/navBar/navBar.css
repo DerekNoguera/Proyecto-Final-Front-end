@@ -1,0 +1,27 @@
+.linkStyle{
+    text-decoration: none;
+    color: black;
+}
+.linkStyle:hover{
+    text-decoration: none;
+    color: brown;
+}
+.bton{
+    border: none;
+    border-radius: 25px;
+    border: solid black 1px;
+    background-color: white;
+    width: 120px;
+    height: 30px;
+}
+.bton:hover{
+    transition: all 1s ease-in-out;
+    border: none;
+    border-radius: 25px;
+    border: solid rgb(255, 255, 255) 1px;
+    background-color: black;
+    color: white;
+}
+.container-fluid{
+ background-color: transparent;
+}

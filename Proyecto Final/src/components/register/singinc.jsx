@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { loginUser, registerUser } from "../services/Api copy";
+import { loginUser, registerUser } from "../../services/Api copy";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+import "./singinc.css"
 const Singinc = () => {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");

@@ -1,0 +1,17 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, auto);     
+    row-gap: 1em;
+}
+.aside{
+    margin-top: 1em;
+    height: 60vh;
+    width: 150vh;
+    border: solid 1px black;
+}
+.container-productos{
+    margin-top: 1em;
+    width: 20vh;
+    height: 20vh;
+    border: solid 1px black;
+}
