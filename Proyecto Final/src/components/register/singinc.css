@@ -1,12 +1,12 @@
-body {
+/* body {
     background-color: #0b172117;
   }
   .btnRyL {
     text-decoration: none;
     color: rgb(255, 255, 255);
-  }
+  } */
 /*REGISTER STYLE*/
-.containerRegister {
+/* .containerRegister {
   width: 40%;
   height: 520px;
   display: grid;
@@ -59,16 +59,16 @@ body {
 
 
 /* LOGIN*/
-.containerLogin {
+/* .containerLogin {
     width: 40%;
     height: 420px;
     display: grid;
     place-items: center;
     margin-left: 30%;
     margin-top: 5%;
-  }
+  } */
 
-.btnLogin{
+/* .btnLogin{
     font-family: Georgia, "Times New Roman", Times, serif;
   background-color: #0b1721;
   height: 30px;
@@ -87,4 +87,124 @@ body {
 .labelLogin{
     font-size: 100%;
   font-family: Georgia, "Times New Roman", Times, serif;
+}  */
+/* components/register/singinc.css */
+
+
+body {
+  background-color: #0b172117;
+}
+.btnRyL {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.containerRegister {
+width: 40%;
+height: 520px;
+display: grid;
+place-items: center;
+margin-left: 30%;
+margin-top: 3%;
+}
+
+@media (max-width: 768px) {
+.containerRegister {
+  width: 60%;
+  margin-left: 20%;
+}
+}
+
+@media (max-width: 480px) {
+.containerRegister {
+  width: 80%;
+  margin-left: 10%;
+}
+}
+
+.h1Txt {
+font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+font-size: 150%;
+}
+.btnLinkR {
+text-decoration: none;
+color: black;
+}
+.btnRegister {
+font-family: Georgia, "Times New Roman", Times, serif;
+background-color: #0b1721;
+height: 30px;
+width: 150px;
+border: none;
+border-radius: 5px;
+margin-left: 15%;
+color: white;
+}
+.btnRegister:hover {
+transition: 1s ease;
+border-radius: 5px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+background: #3f78a7;
+}
+.inpTxt {
+font-family: Georgia, "Times New Roman", Times, serif;
+width: 250px;
+height: 30px;
+border: none;
+
+border-bottom: 1px solid black;
+}
+.inpTxt:focus {
+transition: 1s ease;
+outline: none;
+}
+.labelRegister {
+font-size: 100%;
+font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+
+.containerLogin {
+  width: 40%;
+  height: 420px;
+  display: grid;
+  place-items: center;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+
+/* Media query para pantallas medianas */
+@media (max-width: 768px) {
+.containerLogin {
+  width: 60%;
+  margin-left: 20%;
+}
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 480px) {
+.containerLogin {
+  width: 80%;
+  margin-left: 10%;
+}
+}
+
+.btnLogin {
+font-family: Georgia, "Times New Roman", Times, serif;
+background-color: #0b1721;
+height: 30px;
+width: 150px;
+border: none;
+border-radius: 5px;
+margin-left: 15%;
+color: white;
+}
+.btnLogin:hover {
+transition: 0.3s ease-in-out;
+border-radius: 5px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+background: #3f78a7;
+}
+.labelLogin {
+font-size: 100%;
+font-family: Georgia, "Times New Roman", Times, serif;
 }

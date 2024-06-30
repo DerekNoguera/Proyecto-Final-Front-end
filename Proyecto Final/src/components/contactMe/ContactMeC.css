@@ -6,7 +6,7 @@
   /* background-color: red; */
 }
 .Container {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 700px;
   height: 500px;

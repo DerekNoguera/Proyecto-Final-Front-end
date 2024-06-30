@@ -4,7 +4,7 @@ import ContactMe from '../components/contactMe/ContactMe'
 
 function Contactanos() {
   return (
-    <div>
+    <div className='contactme'>
       <NavbarFun/>
       <ContactMe/>
     </div>

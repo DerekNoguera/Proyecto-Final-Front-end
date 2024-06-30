@@ -22,6 +22,18 @@
     background-color: black;
     color: white;
 }
-.container-fluid{
- background-color: transparent;
+/* .container-fluid{
+        /* background-color: ; */
+/* } */
+.nameProfile{
+    
+    margin-left: -20%;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    color: brown;
+}
+.div{
+    margin-top: 2%;
 }

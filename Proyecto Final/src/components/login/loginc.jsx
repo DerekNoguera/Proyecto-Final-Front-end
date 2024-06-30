@@ -14,8 +14,10 @@ const Loginc = () => {
     let validarInicio = false
     inicioExitoso.forEach((e) => {// for de el api para buscar los usuarios existentes
       if (user === e.user && password === e.password) {// si el usuario y contraseña es correcto
+        let id = e.id;
         //crea un token el local y me dirige a la pagina
-        localStorage.setItem("token", true);
+        localStorage.setItem("token", true,id, );
+        localStorage.setItem("token2",id, );
         validarInicio = true
         setTimeout(() => {
           Navegar("/home");
@@ -41,7 +43,7 @@ const Loginc = () => {
         <input className="inpTxt" type="text" placeholder="User" value={user} onChange={(e) => Cambiar1(e.target.value)} /><br /><br /><br />
         {/* // en el onChnage cambiar1 se llama y se ejecuta que a setValue, que setvalue es lo que se va a setear del input // setValue(e.target.value); */}
         <label className="labelLogin" htmlFor="">Password</label><br /><br />
-        <input className="inpTxt" type="text"  name="name" placeholder="password"  value={password}  onChange={(e) => Cambiar2(e.target.value)} /> <br /><br /><br />
+        <input className="inpTxt" type="password"  name="name" placeholder="password"  value={password}  onChange={(e) => Cambiar2(e.target.value)} /> <br /><br /><br />
         <input className="btnLogin" type="button" value="Iniciar Sesion" onClick={perrito}  /><br /><br />
         {/* // funcion para el boton */}
         <button className="btnLogin"><Link className="btnRyL" to="/register"> Ir a registrarse</Link></button>

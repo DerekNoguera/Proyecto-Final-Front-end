@@ -12,6 +12,8 @@ export const registerUser = async (user, email, password) => {
             email: email,
             password: password,
             ObjTarea: [],
+            // rol: "Admin",
+            rol: "User"
         });
         return response.data;
 };

@@ -1,9 +1,8 @@
-import Button from 'react-bootstrap/Button';
+
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import "./navBar.css"
 import { useNavigate } from 'react-router-dom';
@@ -30,26 +29,12 @@ function NavbarFun() {
             navbarScroll
           >
             <Nav.Link><Link to={"/home"} className='linkStyle'>Home</Link> </Nav.Link>
-            <Nav.Link> <Link to={"/aboutMe"} className='linkStyle'>Sobre Nosotros</Link></Nav.Link>
-            <Nav.Link> <Link to={"/Contactanos"} className='linkStyle'>Contactanos</Link></Nav.Link>
-            <NavDropdown title="Redes Sociales" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="https://instagram.com/23dereek"> Instagram: 23dereek</NavDropdown.Item>
-              <NavDropdown.Item href="https://tiktok.com/23dereek">Tiktok: 23dereek</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item><Link to={"../soporte"} className='linkStyle'>Soporte Aqui</Link></NavDropdown.Item>
-            </NavDropdown>
           </Nav>
           <Form className="d-flex">
             <div className='div'>
                <Nav.Link><Link  to={"/Admin"} className='nameProfile'>Profile</Link> </Nav.Link>
             </div>
-         
-            {/* <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
+            {/* <Form.Control type="search" placeholder="Search"  className="me-2"  aria-label="Search"  />
             <Button >Search</Button> */}
              <input type="button" className='bton' value="Cerrar Sesion"
               onClick={BorrarItem} variant="outline-success" />

@@ -6,11 +6,11 @@ import PaginaError from "../components/paginaError";
 import PaginaPriv from "../components/paginaPriv";
 import AboutMe from "../pages/aboutMe";
 import Contactanos from "../pages/Contactanos";
+import PaginaErrorUser from "../components/paginaErrorUser";
+import PaginaAdmin from "../components/PaginaAdmin";
+// import Admin from "../pages/Admin";
 
-
-// import { Auth0Provider } from '@auth0/auth0-react';
 const Rutas = () => {
-
   return (
     <>
       <Router>
@@ -19,10 +19,15 @@ const Rutas = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Singin />} />
           <Route path="/error" element={<PaginaError/>}/>
+          <Route path="noAdmin" element={<PaginaErrorUser/>}/>
           <Route path="/*" element={<PaginaError/>}/>
           <Route path="/home" element={<PaginaPriv>
             <Home/>
           </PaginaPriv>}/>
+            <Route path="/Admin" element={<PaginaAdmin/>}/>
+          {/* <Route path="/Admin" element={<PaginaAdmin>
+            <Admin/>
+          </PaginaAdmin>}/> */}
           <Route path="/aboutMe" element={<AboutMe/>}/>
           <Route path="/Contactanos" element={<Contactanos/>}/>
         </Routes>
