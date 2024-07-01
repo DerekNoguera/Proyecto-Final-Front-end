@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -77,14 +77,6 @@ function CarruselC() {
           {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
         </Carousel.Caption>
       </Carousel.Item>
-
-
-
-
-
-
-
-
       <Carousel.Item>
         <img
           className="d-block"
