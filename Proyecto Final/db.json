@@ -1,0 +1,148 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "user": "Derek",
+      "email": "derek@gmail.com",
+      "password": "12"
+    },
+    {
+      "id": "2b72",
+      "user": "derek2",
+      "email": "derek2@gmail.com",
+      "password": "12",
+      "ObjCars": []
+    }
+  ],
+  "Nissan": [
+    {
+      "id": "2",
+      "urlImg": "https://es.nissanusa.com/content/dam/Nissan/us/vehicles/gtr/2024/site-simp/overview/pfa/2024-nissan-gt-r-sports-car-light-green-side-profile-view.jpg",
+      "marca": "Nissan",
+      "año": "2022",
+      "precio": "500.000 USD"
+    },
+    {
+      "id": "3",
+      "urlImg": "https://es.nissanusa.com/content/dam/Nissan/us/vehicles/gtr/2024/site-simp/overview/pfa/2024-nissan-gt-r-sports-car-light-green-side-profile-view.jpg",
+      "marca": "Nissan2",
+      "año": "2022",
+      "precio": "500.000 USD"
+    },
+    {
+      "id": "fff3",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Nissan_GT-R_T-spec_MY2024%2C_front%2C_2023.jpg",
+      "marca": "Nissan",
+      "año": "2015",
+      "precio": "500.000$"
+    },
+    {
+      "id": "92ba",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Nissan_GT-R_T-spec_MY2024%2C_front%2C_2023.jpg",
+      "marca": "Nissan",
+      "año": "2016",
+      "precio": "100.000$"
+    },
+    {
+      "id": "ce7a",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Nissan_GT-R_T-spec_MY2024%2C_front%2C_2023.jpg",
+      "marca": "Chevrolet",
+      "año": "2016",
+      "precio": "100.000$"
+    },
+    {
+      "id": "e3ec",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Nissan_GT-R_T-spec_MY2024%2C_front%2C_2023.jpg",
+      "marca": "Ferrari",
+      "año": "2016",
+      "precio": "100.000$"
+    },
+    {
+      "id": "bd90",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Nissan_GT-R_T-spec_MY2024%2C_front%2C_2023.jpg",
+      "marca": "Ferrari",
+      "año": "2016",
+      "precio": "100.000$"
+    },
+    {
+      "id": "f4f9",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Nissan_GT-R_T-spec_MY2024%2C_front%2C_2023.jpg",
+      "marca": "Nissan",
+      "año": "2016",
+      "precio": "100.000$"
+    }
+  ],
+  "Ferrari": [
+    {
+      "id": "4",
+      "urlImg": "https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2022/04/ferrari-458-speciale-deportivo-lujo-gris-2665843.jpg?tf=1920x",
+      "marca": "Ferrari",
+      "año": "2022",
+      "precio": "500.000 USD"
+    },
+    {
+      "id": "ecf4",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Nissan_GT-R_T-spec_MY2024%2C_front%2C_2023.jpg",
+      "marca": "Ferrari",
+      "año": "2016",
+      "precio": "100.000$"
+    }
+  ],
+  "Lamborghini": [
+    {
+      "id": "5",
+      "urlImg": "https://acnews.blob.core.windows.net/imgnews/large/NAZ_3527df86f78d43bd93da22ef9a8eb9d6.jpg",
+      "marca": "Lamborghini",
+      "año": "2022",
+      "precio": "500.000 USD"
+    }
+  ],
+  "Chevrolet": [
+    {
+      "id": "1",
+      "urlImg": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2024/trucks/silverado-ld-1500/masthead/2024-silverado-mov-masthead.jpg?imwidth=1800",
+      "marca": "Chevrolet",
+      "año": "2022",
+      "precio": "500.000 USD"
+    }
+  ],
+  "Honda": [
+    {
+      "id": "1",
+      "urlImg": "https://cdn.motor1.com/images/mgl/ZobwZ/s1/next-gen-honda-civic-type-renderings.webp",
+      "marca": "Honda",
+      "año": "2022",
+      "precio": "500.000 USD"
+    },
+    {
+      "id": "1cf0",
+      "Url": "https://hips.hearstapps.com/hmg-prod/images/2023-lightning-lap-honda-civic-type-r-mu-102-1675451016.jpg?crop=0.492xw:0.416xh;0.202xw,0.391xh&resize=1200:*",
+      "marca": "Honda",
+      "año": "2022",
+      "precio": "70.000$"
+    },
+    {
+      "id": "34d6",
+      "Url": "https://hips.hearstapps.com/hmg-prod/images/2023-lightning-lap-honda-civic-type-r-mu-102-1675451016.jpg?crop=0.492xw:0.416xh;0.202xw,0.391xh&resize=1200:*",
+      "marca": "Honda",
+      "año": "2022",
+      "precio": "70.000$"
+    }
+  ],
+  "Toyota": [
+    {
+      "id": "1",
+      "urlImg": "https://fotos.perfil.com/2022/09/12/trim/856/481/toyota-suv-compacto-1417793.jpg?webp",
+      "marca": "Toyota",
+      "año": "2022",
+      "precio": "500.000 USD"
+    },
+    {
+      "id": "11cd",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Nissan_GT-R_T-spec_MY2024%2C_front%2C_2023.jpg",
+      "marca": "Toyota",
+      "año": "121",
+      "precio": "1212"
+    }
+  ]
+}
