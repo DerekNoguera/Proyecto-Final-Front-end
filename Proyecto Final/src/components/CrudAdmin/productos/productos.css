@@ -6,3 +6,83 @@
     color: white;
     font-size: 50px;
 }
+.agregarProducto{
+    font-family: 20px;
+    margin-left: 49%;
+    margin-top: 22%;
+    width: 100px;
+    height: 100px;
+    transition: all 0.5s ease;
+}
+.agregarProducto:hover{
+    width: 100px;
+    height: 100px;
+    transition: all 0.5s ease;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border:  none;
+}
+.DivMayorModal{
+    width: 40%;
+    height: 50%;
+    background-color: rgba(53, 53, 53, 0.801);
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+    margin-left: 23%;
+    margin-top: 14%;
+}
+.cerrarModal{
+    font-size: 10px;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    border:  none;
+    margin: 0px 78%;
+    margin-top: 5%;
+}
+
+.containerMini{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+.mini1{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 70% 20%;
+}
+.mini2{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.inpPost{
+    font-size: 12px;
+    width: 200px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: transparent ;
+    color:  white !important;
+    
+}
+.inpPost:focus{
+    outline: none;
+}
+.divImg{
+    width: 90%;
+    height: 100%;
+    display: grid;
+    place-items: center ;
+}
+.imgPost{
+    height: 80%;
+    width: 90%;
+    border-radius: 10%;
+}
+.btnAgregar{
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+}

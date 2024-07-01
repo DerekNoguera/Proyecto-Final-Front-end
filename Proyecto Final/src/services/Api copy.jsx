@@ -11,30 +11,17 @@ export const registerUser = async (user, email, password) => {
             user: user,
             email: email,
             password: password,
-            ObjTarea: [],
+            ObjCars: [],
             // rol: "Admin",
-            rol: "User"
+            // rol: "User"
         });
         return response.data;
 };
-// export const registerUser = async (user, email, password) =>{
-//     try {
-//         const response = await fetch('http://localhost:3000/api/aplicacion/', {
-//             method: 'POST', // metodo post para que se haga un post de lo que añadi
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify({
-//                 user: user,
-//                 email: email,
-//                 password: password,
-//                 ObjTarea: []
-
-//             })
-//         });
-//         const data = await response.json();
-//         return data
-//     } catch (error) {
-//         console.error(error)
-//     }
-// }
+export const Postcars = async (hola) => {
+    const response = await axios.post("http://localhost:3000/api/", {
+        marca: hola,
+        año: "2022",
+        precio: "Precio"
+    });
+    return response.data;
+}
