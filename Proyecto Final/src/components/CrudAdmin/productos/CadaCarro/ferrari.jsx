@@ -1,24 +1,18 @@
 import { useEffect, useState } from "react";
-import getNissan from "../../../../services/Api copy";
-import deleteNissan from  "../../../../services/Nissan"
+import  { getFerrari } from "../../../../services/Api copy";
 import "./carros.css";
-function NissanMostrar() {
+function FerrariMostrar() {
   const [items, setCarros] = useState([]);
   useEffect(() => {
     datos();
   }, []);
   const datos = async () => {
-    const datosNissan = await getNissan();
-    setCarros(datosNissan);
+    const datosFerrari = await getFerrari();
+    
+    setCarros(datosFerrari);
   };
 
-  const eliminarNissan = async (id)=>{
-        deleteNissan(id)
-          setTimeout(() => {
-            datos()
-           }, 100) 
-      }
- 
+
   return (
     <div>
       <div className="divsCarros">
@@ -33,9 +27,10 @@ function NissanMostrar() {
               <p className="precio"> {"$" + item.precio}</p>
             </div>
             <div>
-              <h4 onClick={()=>eliminarNissan(item.id)}>Hola </h4>
+            <h6>delete</h6>
             </div>
             </div>
+            
           </div>
         ))}
       </div>
@@ -43,4 +38,19 @@ function NissanMostrar() {
   );
 }
 
-export default NissanMostrar;
+export default FerrariMostrar;
+// import React from 'react'
+// import getFerrari from "../../../../services/Api copy"
+// function FerrariMostrar() {
+//     const Datos = async ()=>{
+//         console.log(await getFerrari());
+//     }
+//     Datos
+//   return (
+//     <div>
+//       hola
+//     </div>
+//   )
+// }
+
+// export default FerrariMostrar

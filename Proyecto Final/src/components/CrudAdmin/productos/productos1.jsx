@@ -16,36 +16,64 @@ function Productos1() {
   const [Toyota, setToyota] = useState('Toyota')
   const handleInputChange = (event) => {
     setImageUrl(event.target.value);
-   
   };
   
   const enviarDatos = async () => {
-   
     if (Marca == Nissan) {
-      console.log("Posteo de Nissan exitoso!!");
       postNissan(imageUrl, Marca, Year, Price,)
+      alert("Posteo Exitoso")
+      setMarca("")
+      setYear("")
+      setPrice("")
+      setImageUrl("")
     }else if (Marca === Ferrari) {
       postFerrari(imageUrl, Marca, Year, Price,)
-      console.log("Posteo de Ferrari exitoso!!");
+      alert("Posteo Exitoso")
+      setMarca("")
+      setYear("")
+      setPrice("")
+      setImageUrl("")
     }
     else if (Marca === Lamborghini) {
       postLambo(imageUrl, Marca, Year, Price,)
-      console.log("Posteo de Lamborghini exitoso!!");
+      alert("Posteo Exitoso")
+      setMarca("")
+      setYear("")
+      setPrice("")
+      setImageUrl("")
     }
     else if (Marca === Chevrolet) {
       postChevrolet(imageUrl, Marca, Year, Price,)
-      console.log("Posteo de Chevrolet exitoso!!");
+      alert("Posteo Exitoso")
+      setMarca("")
+      setYear("")
+      setPrice("")
+      setImageUrl("")
     }
     else if (Marca === Honda) {
       postHonda(imageUrl, Marca, Year, Price,)
-      console.log("Posteo de Honda exitoso!!");
+      alert("Posteo Exitoso")
+      setMarca("")
+      setYear("")
+      setPrice("")
+      setImageUrl("")
     }
     else if (Marca === Toyota) {
       postToyota(imageUrl, Marca, Year, Price,)
-      console.log("Posteo de Toyota exitoso!!");
+      alert("Posteo Exitoso")
+      setMarca("")
+      setYear("")
+      setPrice("")
+      setImageUrl("")
     }
+  //  if ( Year.trim()|| Price.trim() || imageUrl.trim()) {
+  //   alert("No puedes dejar campos incompletos")
+  //  }else{
     
+  //  }  
   }
+
+
   const openModal = () => {
     setModalAbierto(true);
   };
@@ -69,7 +97,7 @@ function Productos1() {
                 <div className='mini1'>
                   <div className='divImg'>
                     {imageUrl && (
-                      <img className='imgPost' src={imageUrl} alt="Imagen" />
+                      <img className='imgPost' src={imageUrl} alt="Imagen"/>
                     )}
                   </div>
                   <div>
