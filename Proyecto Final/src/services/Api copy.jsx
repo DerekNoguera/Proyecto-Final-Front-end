@@ -56,7 +56,7 @@ export const getFerrari = async () => {
 
 };
 export const postLambo = async (imageUrl, Marca, Year, Price, ) => {
-    const response = await axios.post(`http://localhost:3001/Lambo`, {
+    const response = await axios.post(`http://localhost:3001/Lamborghini`, {
         Url: imageUrl,
         marca: Marca,
         año: Year,
@@ -64,12 +64,12 @@ export const postLambo = async (imageUrl, Marca, Year, Price, ) => {
     });
     return response.data;
 }
-export const getLambo = async () => {
-    const response = await axios.get(`http://localhost:3001/Lambo`, {
-    });
-    return response.data;
+// export const getLambo = async () => {
+//     const response = await axios.get(`http://localhost:3001/Lamborghini`, {
+//     });
+//     return response.data;
 
-};
+// };
 export const postChevrolet = async (imageUrl, Marca, Year, Price, ) => {
     const response = await axios.post(`http://localhost:3001/Chevrolet`, {
         Url: imageUrl,
@@ -79,12 +79,12 @@ export const postChevrolet = async (imageUrl, Marca, Year, Price, ) => {
     });
     return response.data;
 }
-export const getChevrolet = async () => {
-    const response = await axios.get(`http://localhost:3001/Chevrolet`, {
-    });
-    return response.data;
+// export const getChevrolet = async () => {
+//     const response = await axios.get(`http://localhost:3001/Chevrolet`, {
+//     });
+//     return response.data;
 
-};
+// };
 export const postHonda = async (imageUrl, Marca, Year, Price, ) => {
     const response = await axios.post(`http://localhost:3001/Honda`, {
         Url: imageUrl,
@@ -94,12 +94,12 @@ export const postHonda = async (imageUrl, Marca, Year, Price, ) => {
     });
     return response.data;
 }
-export const getHonda = async () => {
-    const response = await axios.get(`http://localhost:3001/Honda`, {
-    });
-    return response.data;
+// export const getHonda = async () => {
+//     const response = await axios.get(`http://localhost:3001/Honda`, {
+//     });
+//     return response.data;
 
-};
+// };
 export const postToyota = async (imageUrl, Marca, Year, Price, ) => {
     const response = await axios.post(`http://localhost:3001/Toyota`, {
         Url: imageUrl,
@@ -109,11 +109,13 @@ export const postToyota = async (imageUrl, Marca, Year, Price, ) => {
     });
     return response.data;
 }
-export const getToyota = async () => {
-    const response = await axios.get(`http://localhost:3001/Toyota`, {
-    });
-    return response.data;
+// export const getToyota = async () => {
+//     const response = await axios.get(`http://localhost:3001/Toyota`, {
+//     });
+//     return response.data;
 
-};
+// };
+export default getNissan;
+
 
 

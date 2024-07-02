@@ -1,24 +1,17 @@
 import { useEffect, useState } from "react";
-import getNissan from "../../../../services/Api copy";
-import deleteNissan from  "../../../../services/Nissan"
+import  getChevrolet from "../../../../services/ChevroletApi";
 import "./carros.css";
-function NissanMostrar() {
+function ChevroletMostrar() {
   const [items, setCarros] = useState([]);
   useEffect(() => {
     datos();
   }, []);
   const datos = async () => {
-    const datosNissan = await getNissan();
-    setCarros(datosNissan);
+    const datosChevrolet = await getChevrolet();
+console.log(datosChevrolet);
+    setCarros(datosChevrolet);
   };
 
-  const eliminarNissan = async (id)=>{
-        deleteNissan(id)
-          setTimeout(() => {
-            datos()
-           }, 100) 
-      }
- 
   return (
     <div>
       <div className="divsCarros">
@@ -33,9 +26,10 @@ function NissanMostrar() {
               <p className="precio"> {"$" + item.precio}</p>
             </div>
             <div>
-              <h4 onClick={()=>eliminarNissan(item.id)}>Hola </h4>
+            <h6>delete</h6>
             </div>
             </div>
+            
           </div>
         ))}
       </div>
@@ -43,4 +37,4 @@ function NissanMostrar() {
   );
 }
 
-export default NissanMostrar;
+export default ChevroletMostrar;

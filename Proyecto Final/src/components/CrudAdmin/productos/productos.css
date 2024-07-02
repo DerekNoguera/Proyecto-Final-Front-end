@@ -81,7 +81,7 @@
 .imgPost{
     height: 80%;
     width: 90%;
-    border-radius: 10%;
+    /* border-radius: 10%; */
     object-fit: cover;
 }
 .btnAgregar{
@@ -93,4 +93,16 @@
 .colorOptions{
     color: black;
     border-bottom: 1px solid black;
+}
+.txt{
+    color: white;
+}
+.marcas{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    
+}
+.estilosNameMarcas{
+    margin-top:10%;
+    text-align: center;
 }
