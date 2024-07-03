@@ -22,19 +22,34 @@
   width: 43vh;
   height: 40vh;
   transition: all 0.5s;
+  border: 1px solid rgba(245, 245, 245, 0.09);
 }
 .divContenido:hover {
     transform: scale(1.01);
   width: 44vh;
   height: 41vh;
-  border: 1px solid rgba(245, 245, 245, 0.09);
+
+  border: 1px solid rgba(255, 255, 255, 0.303);
 }
 .precio {
-  font-size: 40%;
+  margin-left: 2%;
+  font-size: 30%;
+  margin-top: -12%;
+  padding-top: 10%;
+}
+.precio2 {
+  font-size: 30%;
+  margin-left: 2%;
+  margin-top: -12%;
+  padding-top: 10%;
 }
 .div2Carros {
   margin-top: 10%;
   margin-left: 5%;
+  width: 100%;
+  height: 50%;
+  display: grid;
+  
 }
 #selectCarros {
   border: none;
@@ -53,10 +68,7 @@
 #selectCarros:focus {
   outline: none;
 }
-.divDescription {
-  display: grid;
-  grid-template-columns: 85% 5%;
-}
+
 .opciones {
 color: black;
 }
@@ -64,9 +76,44 @@ color: black;
   width: 10vh;
   height: 3vh;
   font-size: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  transition: all 1s ease;
+}
+.Inpdelete:hover{
+ transform: scale(1,1);
+}
+.divDescription {
+  display: grid;
+  grid-template-columns: 77% 5%;
 }
 .Editar{
   width: 10vh;
   height: 3vh;
   font-size: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  transition: all 1s ease;
+  margin-top: -20%;
+}
+.Editar:hover{
+  transition: all 1s ease;
+  transform: scale(1.1);
+}
+.divInpCrud{
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  margin-top: 110%;
+  margin-left: -100%;
+}
+.h6Txt{
+  font-size: 30%;
+  margin-top: -10%;
+  margin-left: 2%;
 }

@@ -10,7 +10,8 @@ function NissanMostrar() {
   const [AbrirModal, setModalAbierto] = useState(false);
   const [Year, setYear] = useState("");
   const [Price, setPrice] = useState("");
-  const [id, setID] = useState(null)
+  const [id, setID] = useState(null);
+  const [Nissan, setNissan] = useState("Nissan");
 
   const handleInputChange = (event) => {
     setImageUrl(event.target.value);
@@ -30,19 +31,17 @@ function NissanMostrar() {
     datos();
   };
   const BotonEditar = (item) => {
-    setID(item.id); 
+    setID(item.id);
     setImageUrl(item.Url);
-    setYear(item.Year);
+    setYear(item.año);
     setPrice(item.precio);
     setModalAbierto(true);
   };
   const enviarDatos = async () => {
-    await putNissan( imageUrl, Year, Price, id);
+    await putNissan(imageUrl, Year, Price, Nissan, id);
     setModalAbierto(false);
     datos();
   };
-
-
   const closeModal = () => {
     setModalAbierto(false);
   };
@@ -57,12 +56,25 @@ function NissanMostrar() {
             </div>
             <div className="divDescription">
               <div className="div2Carros">
-                <h6>{item.marca}</h6>
-                <p className="precio">{"$" + item.precio}</p>
+                <h6 className="h6Txt">{item.marca}</h6>
+                <p className="precio">{item.año}</p>
+                <p className="precio2">{"$" + item.precio}</p>
               </div>
               <div>
-                <input className="Inpdelete" onClick={() => eliminarNissan(item.id)} type="button" value="Eliminar" />
-                <input className="Editar" onClick={() => BotonEditar(item)} type="button" value="Editar" />
+                <div className="divInpCrud">
+                  <input
+                    className="Inpdelete"
+                    onClick={() => eliminarNissan(item.id)}
+                    type="button"
+                    value="Eliminar"
+                  />
+                  <input
+                    className="Editar"
+                    onClick={() => BotonEditar(item)}
+                    type="button"
+                    value="Editar"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -80,15 +92,49 @@ function NissanMostrar() {
                     )}
                   </div>
                   <div>
-                    <input className="btnAgregar" type="button" value="Editar" onClick={enviarDatos} />
+                    <input
+                      className="btnAgregar"
+                      type="button"
+                      value="Editar"
+                      onClick={enviarDatos}
+                    />
                   </div>
                 </div>
                 <div className="mini2">
-                  <input className="cerrarModal" onClick={closeModal} type="button" value="X" />
+                  <input
+                    className="cerrarModal"
+                    onClick={closeModal}
+                    type="button"
+                    value="X"
+                  />
                   <div>
-                    <input className="inpPost" type="text" placeholder="URL de la Imagen" value={imageUrl} onChange={handleInputChange} />
-                    <input className="inpPost" type="text" placeholder="Year" value={Year} onChange={(e) => setYear(e.target.value)} />
-                    <input className="inpPost" type="text" placeholder="Precio en USD" value={Price} onChange={(e) => setPrice(e.target.value)}
+                    <option
+                      className="inpPost"
+                      value={Nissan}
+                      onChange={(e) => setNissan(e.target.value)}
+                    >
+                      Nissan
+                    </option>
+                    <input
+                      className="inpPost"
+                      type="text"
+                      placeholder="URL de la Imagen"
+                      value={imageUrl}
+                      onChange={handleInputChange}
+                    />
+                    <input
+                      className="inpPost"
+                      type="text"
+                      placeholder="Year"
+                      value={Year}
+                      onChange={(e) => setYear(e.target.value)}
+                    />
+                    <input
+                      className="inpPost"
+                      type="text"
+                      placeholder="Precio en USD"
+                      value={Price}
+                      onChange={(e) => setPrice(e.target.value)}
                     />
                   </div>
                 </div>
@@ -102,4 +148,3 @@ function NissanMostrar() {
 }
 
 export default NissanMostrar;
-

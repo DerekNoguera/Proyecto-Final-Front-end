@@ -77,8 +77,6 @@ function Productos1() {
     
   //  }  
   }
-
-
   const openModal = () => {
     setModalAbierto(true);
   };

@@ -21,13 +21,16 @@ const Rutas = () => {
           <Route path="/error" element={<PaginaError/>}/>
           <Route path="noAdmin" element={<PaginaErrorUser/>}/>
           <Route path="/*" element={<PaginaError/>}/>
+
+
+          
           <Route path="/home" element={<PaginaPriv>
             <Home/>
           </PaginaPriv>}/>
+
+
+
             <Route path="/Admin" element={<PaginaAdmin/>}/>
-          {/* <Route path="/Admin" element={<PaginaAdmin>
-            <Admin/>
-          </PaginaAdmin>}/> */}
           <Route path="/aboutMe" element={<AboutMe/>}/>
           <Route path="/Contactanos" element={<Contactanos/>}/>
         </Routes>
