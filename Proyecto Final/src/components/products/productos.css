@@ -51,8 +51,9 @@
     color: white;
     margin-top: 20%;
     text-align: center;
-    width: 100%;
+    width: 95%;
     height: 30px;
+    /* font-size: 1000%; */
 }
 
 .componentesDivMayor {

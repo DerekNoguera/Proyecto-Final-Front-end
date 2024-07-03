@@ -16,48 +16,43 @@
   ],
   "Nissan": [
     {
-      "id": "e9b9",
-      "Url": "https://i.ebayimg.com/images/g/FcIAAOSw5R5k1NpG/s-l960.webp",
+      "id": "b7d2",
+      "Url": "https://www.dmegtclub.com/wp-content/uploads/2021/01/Nissan-GTR-R35-02.jpg",
       "marca": "Nissan",
-      "año": "2000",
-      "precio": "56.000"
-    },
-    {
-      "Url": "https://i.ebayimg.com/images/g/FcIAAOSw5R5k1NpG/s-l960.webp",
-      "precio": "22.000",
-      "id": "0654"
+      "año": "2022",
+      "precio": "27.999"
     }
   ],
   "Ferrari": [
     {
-      "id": "2dce",
-      "Url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/F40_Ferrari_20090509.jpg",
       "marca": "Ferrari",
-      "año": "2017",
-      "precio": "80.000"
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/F40_Ferrari_20090509.jpg",
+      "año": "2012",
+      "precio": "17.099",
+      "id": "2dce"
     },
     {
-      "id": "478c",
-      "Url": "https://cdn.ferrari.com/cms/network/media/img/resize/5de8bc007953932d566b36d0-ferrari-f40-1987-history-desk-22?width=1920&height=1080",
       "marca": "Ferrari",
-      "año": "2000",
-      "precio": "57.999"
+      "Url": "https://cdn.ferrari.com/cms/network/media/img/resize/5de8bc007953932d566b36d0-ferrari-f40-1987-history-desk-22?width=1920&height=1080",
+      "precio": "13.999",
+      "año": "2022",
+      "id": "478c"
+    },
+    {
+      "id": "be45",
+      "Url": "https://www.dmegtclub.com/wp-content/uploads/2021/01/Nissan-GTR-R35-02.jpg",
+      "marca": "Ferrari",
+      "año": "2022",
+      "precio": "27.999"
     }
   ],
   "Lamborghini": [
     {
-      "id": "01d1",
       "Url": "https://hips.hearstapps.com/hmg-prod/images/2025-lamborghini-urus-phev-101-66292cabec3a8.jpg?crop=0.688xw:0.583xh;0.204xw,0.338xh&resize=1200:*",
+      "precio": "240.000",
       "marca": "Lamborghini",
       "año": "2022",
-      "precio": "350.000"
-    },
-    {
-      "id": "e348",
-      "Url": "https://hips.hearstapps.com/hmg-prod/images/2025-lamborghini-urus-phev-101-66292cabec3a8.jpg?crop=0.688xw:0.583xh;0.204xw,0.338xh&resize=1200:*",
-      "marca": "Lamborghini",
-      "año": "2021",
-      "precio": "299.999"
+      "id": "01d1"
     }
   ],
   "Chevrolet": [
@@ -69,43 +64,43 @@
       "precio": "78.000"
     },
     {
-      "id": "2fac",
+      "marca": "Ferrari",
       "Url": "https://img.remediosdigitales.com/5f4971/chevrolet-silverado_hd-2024-1600-03/1366_2000.jpg",
-      "marca": "Chevrolet",
-      "año": "2019",
-      "precio": "57.999"
+      "precio": "100.000",
+      "año": "2022",
+      "id": "2fac"
     }
   ],
   "Honda": [
     {
-      "id": "a057",
-      "Url": "https://hips.hearstapps.com/hmg-prod/images/2008-honda-s2000-cr-1k-bat-31-1588148686.jpeg?crop=0.801xw:0.674xh;0.0606xw,0.259xh&resize=2048:*",
+      "Url": "https://es.nissanusa.com/content/dam/Nissan/us/vehicles/sentra/2024/overview/PFA/2024-nissan-sentra-blue-driveway-front-building-d.jpg",
+      "precio": "6700",
       "marca": "Honda",
-      "año": "2000",
-      "precio": "16.000"
-    },
-    {
-      "id": "db23",
-      "Url": "https://upload.wikimedia.org/wikipedia/commons/2/23/2022_Honda_Civic_LX_Sedan%2C_front_right%2C_11-02-2022.jpg",
-      "marca": "Honda",
-      "año": "2001",
-      "precio": "7000"
+      "año": "2022",
+      "id": "c378"
     }
   ],
   "Toyota": [
     {
-      "id": "3e6b",
-      "Url": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_12dcd850261247fa9ef9be8019c2285b.jpg",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Nissan_NP300_Navara_DoubleCab.jpg",
+      "precio": "12.000",
       "marca": "Toyota",
-      "año": "2010",
-      "precio": "6500"
+      "año": "2022",
+      "id": "1030"
     },
     {
-      "id": "d404",
-      "Url": "https://cdn-api.toyotacr.com/toyotacr_website/uploads/gallery/6240accad660e004f08cb663cd80bfa6771e5d8d.png",
+      "id": "799c",
+      "Url": "ajshajksa",
       "marca": "Toyota",
-      "año": "2011",
-      "precio": "5.500"
+      "año": "2022",
+      "precio": "211.222"
+    },
+    {
+      "Url": "https://cdn.motor1.com/images/mgl/PKZQL/s3/1997-toyota-supra-sold-for-176-000-at-auction.jpg",
+      "año": "2021",
+      "precio": "12.999",
+      "marca": "Toyota",
+      "id": "3c1a"
     }
   ]
 }

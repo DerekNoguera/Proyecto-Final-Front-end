@@ -19,10 +19,11 @@ function HondaComponente() {
                             <img className="imgCarros" src={item.Url} alt="" />
                         </div>
                         <div className="divDescription">
-                            <div className="div2Carros">
-                                <h6 className="marca">{item.marca}</h6>
-                                <p className="precio"> {"$" + item.precio}</p>
-                            </div>
+                        <div className="div2Carros">
+                            <h6 className="h6Mostrar">{item.marca}</h6>
+                            <p className="pecioMostrar">{item.año}</p>
+                            <p className="pecioMostrar2">{"$" + item.precio}</p>
+                        </div>
                         </div>
                     </div>
                 ))}

@@ -5,38 +5,27 @@ import LamboComponente from '../../components/CrudAdmin/productos/componentesCar
 import ChevroletComponent from '../../components/CrudAdmin/productos/componentesCarros/ChevroletComponente'
 import HondaComponente from '../../components/CrudAdmin/productos/componentesCarros/HondaComponente'
 import ToyotaComponente from '../../components/CrudAdmin/productos/componentesCarros/ToyotaComponente'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 function Productos() {
   const [CambiarComponente, setCambiarComponente] = useState("nissan");
+    useEffect(() => {
+    console.log("hola");
+      },[])
 
-  const CambiarNissan = () => {
-    setCambiarComponente("nissan");
-  }
-  const CambiarFerrari = () => {
-    setCambiarComponente("ferrari");
-  }
-  const CambiarLambo = () => {
-    setCambiarComponente("lambo");
-  }
-  const CambiarChevrolet = () => {
-    setCambiarComponente("chevrolet");
-  }
-  const CambiarHonda = () => {
-    setCambiarComponente("Honda");
-  }
-  const CambiarToyota = () => {
-    setCambiarComponente("Toyota");
-  }
+
+
+   
+
   return (
     <div className="grid-container">
       <div className="container-productos">
         <nav className='marcas'>
-          <h6 className='estilosNameMarcas2' onClick={CambiarNissan}>Nissan</h6>
-          <h6 className='estilosNameMarcas2' onClick={CambiarFerrari}>Ferrari</h6>
-          <h6 className='estilosNameMarcas2' onClick={CambiarLambo}>Lamborghini</h6>
-          <h6 className='estilosNameMarcas2' onClick={CambiarChevrolet}>Chevrolet</h6>
-          <h6 className='estilosNameMarcas2' onClick={CambiarHonda}>Honda</h6>
-          <h6 className='estilosNameMarcas2' onClick={CambiarToyota}>Toyota</h6>
+          <div onClick={() => setCambiarComponente("nissan")}><h6 className='estilosNameMarcas2' >Nissan</h6></div>
+          <div onClick={() => setCambiarComponente("ferrari")}><h6 className='estilosNameMarcas2'>Ferrari</h6></div>
+          <div onClick={() => setCambiarComponente("lambo")}><h6 className='estilosNameMarcas2' >Lamborghini</h6></div>
+          <div onClick={() => setCambiarComponente("chevrolet")}><h6 className='estilosNameMarcas2' >Chevrolet</h6></div>
+          <div onClick={() =>  setCambiarComponente("Honda")}><h6 className='estilosNameMarcas2' >Honda</h6></div>
+          <div onClick={() => setCambiarComponente("Toyota")}><h6 className='estilosNameMarcas2' >Toyota</h6></div>
         </nav>
         <div className="componentesDivMayor"> <br /><br />
           <div className="ComponentesAutos">

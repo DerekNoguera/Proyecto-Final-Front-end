@@ -16,7 +16,7 @@ function CarruselC() {
         />
         <Carousel.Caption>
      
-          {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
+
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -27,7 +27,7 @@ function CarruselC() {
         />
         <Carousel.Caption>
 
-          {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+       
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -38,7 +38,7 @@ function CarruselC() {
         />
         <Carousel.Caption>
 
-          {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -50,7 +50,7 @@ function CarruselC() {
         />
         <Carousel.Caption>
 
-          {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -62,7 +62,7 @@ function CarruselC() {
         />
         <Carousel.Caption>
 
-          {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -74,7 +74,7 @@ function CarruselC() {
         />
         <Carousel.Caption>
 
-          {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -84,10 +84,6 @@ function CarruselC() {
           alt="Third slide"
         />
         <Carousel.Caption>
-{/* 
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p> */}
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
