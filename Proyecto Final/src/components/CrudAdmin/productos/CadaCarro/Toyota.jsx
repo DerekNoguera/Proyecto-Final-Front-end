@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import getToyota from "../../../../services/Toyota";
+import getToyota from "../../../../services/Carros/Toyota/getToyota";
+import deleteToyota from '../../../../services/Carros/Toyota/deleteToyota';
 import "./carros.css";
 function ToyotaMostrar() {
   const [items, setCarros] = useState([]);
@@ -10,6 +11,12 @@ function ToyotaMostrar() {
     const datosNissan = await getToyota();
     setCarros(datosNissan);
   };
+  const eliminarToyota = async (id) => {
+    deleteToyota(id)
+    setTimeout(() => {
+      datos()
+    }, 100)
+  }
 
 
   return (
@@ -26,7 +33,7 @@ function ToyotaMostrar() {
               <p className="precio"> {"$" + item.precio}</p>
             </div>
             <div>
-            <h6>delete</h6>
+            <input className="Inpdelete" onClick={() => eliminarToyota(item.id)} type="button" value="Eliminar" />
             </div>
             </div>
             

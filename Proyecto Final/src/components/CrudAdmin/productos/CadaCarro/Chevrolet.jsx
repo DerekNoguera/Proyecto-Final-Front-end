@@ -1,14 +1,23 @@
 import { useEffect, useState } from "react";
-import  getChevrolet from "../../../../services/ChevroletApi";
+import deleteChevrolet from '../../../../services/Carros/Chevrolet/deleteChevrolet';
+import getChevrolet from "../../../../services/Carros/Chevrolet/getChevrolet";
 import "./carros.css";
 function ChevroletMostrar() {
   const [items, setCarros] = useState([]);
   useEffect(() => {
     datos();
   }, []);
+
+  const eliminarChevrolet = async (id) => {
+    deleteChevrolet(id)
+    setTimeout(() => {
+      datos()
+    }, 100)
+  }
+
   const datos = async () => {
     const datosChevrolet = await getChevrolet();
-console.log(datosChevrolet);
+    console.log(datosChevrolet);
     setCarros(datosChevrolet);
   };
 
@@ -22,14 +31,14 @@ console.log(datosChevrolet);
             </div>
             <div className="divDescription">
               <div className="div2Carros">
-              <h6 >{item.marca}</h6>
-              <p className="precio"> {"$" + item.precio}</p>
+                <h6 >{item.marca}</h6>
+                <p className="precio"> {"$" + item.precio}</p>
+              </div>
+              <div>
+                <input className="Inpdelete" onClick={() => eliminarChevrolet(item.id)} type="button" value="Eliminar" />
+              </div>
             </div>
-            <div>
-            <h6>delete</h6>
-            </div>
-            </div>
-            
+
           </div>
         ))}
       </div>

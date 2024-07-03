@@ -1,4 +1,4 @@
- async function deleteNissan (id) {
+async function deleteNissan (id) {
     const response = await fetch(`http://localhost:3001/Nissan/${id}`, {
         method: 'DELETE',
     });

@@ -35,13 +35,15 @@
 }
 .cerrarModal{
     font-size: 10px;
-    width: 40px;
+    width: 50px;
     height: 20px;
     border-radius: 10px;
+    background-color: transparent;
     transition: all 0.5s ease;
     border:  none;
-    margin: 0px 78%;
-    margin-top: 5%;
+    margin: 0px 83%;
+    margin-top: 0%;
+    color: white;
 }
 
 .containerMini{

@@ -60,3 +60,13 @@
 .opciones {
 color: black;
 }
+.Inpdelete{
+  width: 10vh;
+  height: 3vh;
+  font-size: 10px;
+}
+.Editar{
+  width: 10vh;
+  height: 3vh;
+  font-size: 10px;
+}
