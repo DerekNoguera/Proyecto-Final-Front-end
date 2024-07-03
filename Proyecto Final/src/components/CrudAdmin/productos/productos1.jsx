@@ -1,6 +1,11 @@
 import './productos.css'
 import { useState } from 'react';
-import {postNissan,postFerrari,postLambo,postChevrolet,postHonda,postToyota} from "../../../services/Api copy"
+import postFerrari from "../../../services/Carros/Ferrari/postFerrari"
+import postToyota from '../../../services/Carros/Toyota/PostToyota';
+import postChevrolet from '../../../services/Carros/Chevrolet/postChevrolet'
+import postLambo from '../../../services/Carros/Lambo/postLambo'
+import postNissan from '../../../services/Carros/Nissan/PostNissan'
+import postHonda from '../../../services/Carros/Honda/postHonda'
 function Productos1() {
 
   const [AbrirModal, setModalAbierto] = useState(false);

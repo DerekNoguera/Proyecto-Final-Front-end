@@ -15,80 +15,53 @@
     height: 20vh;
     border: solid 1px black;
 } */
- /* components/products/productos.css */
+/* components/products/productos.css */
 
-.grid-container{
-    display: grid;
-    grid-template-columns: 160vh 50vh;     
-    row-gap: 1em;
-}
 
-/* Media query para pantallas medianas */
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-.container-productos{
-    margin-left: 1%;
-    margin-top: 1em;
-    height: 60vh;
-    width: 153vh;
-    border: solid 1px rgb(255, 255, 255);
-}
-
-/* Media query para pantallas medianas */
-@media (max-width: 768px) {
-    .aside {
-        width: 100vh;
-        height: 50vh;
-    }
-}
-
-.aside{
-    margin-top: 1em;
-    width: 36vh;
-    height: 40vh;
-    border: solid 1px rgb(255, 255, 255);
-}
-
-/* Media query para pantallas medianas */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .container-productos {
         width: 15vh;
         height: 15vh;
     }
 }
 
-/* Media query para pantallas pequeñas */
+
 @media (max-width: 480px) {
     .container-productos {
         width: 10vh;
         height: 10vh;
     }
-    .aside {
-        width: 80vh;
-        height: 40vh;
-    }
+} */
+
+.grid-container {
+    background-color: black;
+    display: grid;
+    place-items: center;
 }
-.txt-Categoria{
+
+
+.container-productos {
+    margin-top: 1em;
+    height: auto;
+    width: 96%;
+    /* border: solid 1px rgb(255, 255, 255); */
+}
+
+.estilosNameMarcas2 {
     color: white;
-    margin-top: 3%;
-    font-size: 1.5em;
-    font-weight: bold;
+    margin-top: 20%;
     text-align: center;
+    width: 100%;
+    height: 30px;
 }
-.lista-Categoria{
-    color: white;
-    text-align: center;
-    margin-top: 5%;
+
+.componentesDivMayor {
+    display: grid;
+    place-content: center;
 }
-.hover{
-    transition: all 1s ease;
-}
-.hover:hover{
-    transform: scale(1.099) ;
-    transition: all 0.1s ease;
-    cursor: pointer;
+
+.ComponentesAutos {
+    display: grid;
+    width: 180vh;
+    height: 100%;
 }

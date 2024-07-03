@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import  getLambo  from "../../../../services/LamboApi";
+import  getLambo  from "../../../../services/Carros/Lambo/getLambo";
+import deleteLambo from '../../../../services/Carros/Lambo/deleteLambo'
 import "./carros.css";
 function LamborghiniMostrar() {
   const [items, setCarros] = useState([]);
@@ -11,7 +12,12 @@ function LamborghiniMostrar() {
     setCarros(datosLambo);
     console.log(datosLambo);
   };
-
+  const eliminarLambo = async (id) => {
+    deleteLambo(id)
+    setTimeout(() => {
+      datos()
+    }, 100)
+  }
   return (
     <div>
       <div className="divsCarros">
@@ -26,7 +32,7 @@ function LamborghiniMostrar() {
               <p className="precio"> {"$" + item.precio}</p>
             </div>
             <div>
-            <h6>delete</h6>
+            <input className="Inpdelete" onClick={() => eliminarLambo(item.id)} type="button" value="Eliminar" />
             </div>
             </div>
             

@@ -1,4 +1,3 @@
-
 import './productos.css';
 import NissanMostrar from "../productos/CadaCarro/nissan";
 import FerrariMostrar from "../productos/CadaCarro/ferrari";
@@ -6,9 +5,7 @@ import LamborghiniMostrar from "../productos/CadaCarro/Lamborghini"
 import ChevroletMostrar from "../productos/CadaCarro/Chevrolet"
 import HondaMostrar from '../productos/CadaCarro/Honda';
 import ToyotaMostrar from '../productos/CadaCarro/Toyota';
-
 import { useState } from 'react';
-
 
 function Productos2() {
   const [CambiarComponente, setCambiarComponente] = useState("nissan");
@@ -31,7 +28,6 @@ function Productos2() {
   const CambiarToyota = () => {
     setCambiarComponente("Toyota");
   }
-
 
   return (
     <div className='div2'>

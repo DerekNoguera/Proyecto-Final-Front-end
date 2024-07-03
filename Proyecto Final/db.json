@@ -16,56 +16,96 @@
   ],
   "Nissan": [
     {
-      "id": "f109",
-      "Url": "https://media.ed.edmunds-media.com/nissan/gt-r/2024/oem/2024_nissan_gt-r_coupe_nismo_fq_oem_1_815.jpg",
+      "id": "e9b9",
+      "Url": "https://i.ebayimg.com/images/g/FcIAAOSw5R5k1NpG/s-l960.webp",
       "marca": "Nissan",
-      "año": "2022",
-      "precio": "12.000"
+      "año": "2000",
+      "precio": "56.000"
+    },
+    {
+      "Url": "https://i.ebayimg.com/images/g/FcIAAOSw5R5k1NpG/s-l960.webp",
+      "precio": "22.000",
+      "id": "0654"
     }
   ],
   "Ferrari": [
     {
-      "id": "eb8e",
-      "Url": "https://acnews.blob.core.windows.net/imgnews/large/NAZ_64423339aa5c4e71a772c52c0752134e.webp",
+      "id": "2dce",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/F40_Ferrari_20090509.jpg",
       "marca": "Ferrari",
-      "año": "2022",
-      "precio": "299.999"
+      "año": "2017",
+      "precio": "80.000"
+    },
+    {
+      "id": "478c",
+      "Url": "https://cdn.ferrari.com/cms/network/media/img/resize/5de8bc007953932d566b36d0-ferrari-f40-1987-history-desk-22?width=1920&height=1080",
+      "marca": "Ferrari",
+      "año": "2000",
+      "precio": "57.999"
     }
   ],
   "Lamborghini": [
     {
-      "id": "8c70",
+      "id": "01d1",
       "Url": "https://hips.hearstapps.com/hmg-prod/images/2025-lamborghini-urus-phev-101-66292cabec3a8.jpg?crop=0.688xw:0.583xh;0.204xw,0.338xh&resize=1200:*",
       "marca": "Lamborghini",
-      "año": "2023",
-      "precio": "499.999"
+      "año": "2022",
+      "precio": "350.000"
+    },
+    {
+      "id": "e348",
+      "Url": "https://hips.hearstapps.com/hmg-prod/images/2025-lamborghini-urus-phev-101-66292cabec3a8.jpg?crop=0.688xw:0.583xh;0.204xw,0.338xh&resize=1200:*",
+      "marca": "Lamborghini",
+      "año": "2021",
+      "precio": "299.999"
     }
   ],
   "Chevrolet": [
     {
-      "id": "b4cb",
-      "Url": "https://hips.hearstapps.com/hmg-prod/images/2024-chevrolet-silverado-1500-high-country-102-642dbddbe725d.jpg?crop=0.788xw:0.666xh;0.171xw,0.212xh&resize=1200:*",
+      "id": "2e55",
+      "Url": "https://img.remediosdigitales.com/5f4971/chevrolet-silverado_hd-2024-1600-03/1366_2000.jpg",
       "marca": "Chevrolet",
-      "año": "2021",
-      "precio": "78.699"
+      "año": "2022",
+      "precio": "78.000"
+    },
+    {
+      "id": "2fac",
+      "Url": "https://img.remediosdigitales.com/5f4971/chevrolet-silverado_hd-2024-1600-03/1366_2000.jpg",
+      "marca": "Chevrolet",
+      "año": "2019",
+      "precio": "57.999"
     }
   ],
   "Honda": [
     {
-      "id": "af33",
-      "Url": "https://upload.wikimedia.org/wikipedia/commons/2/20/2023_Honda_Civic_Type_R.jpg",
+      "id": "a057",
+      "Url": "https://hips.hearstapps.com/hmg-prod/images/2008-honda-s2000-cr-1k-bat-31-1588148686.jpeg?crop=0.801xw:0.674xh;0.0606xw,0.259xh&resize=2048:*",
       "marca": "Honda",
-      "año": "2022",
-      "precio": "12.700"
+      "año": "2000",
+      "precio": "16.000"
+    },
+    {
+      "id": "db23",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/2/23/2022_Honda_Civic_LX_Sedan%2C_front_right%2C_11-02-2022.jpg",
+      "marca": "Honda",
+      "año": "2001",
+      "precio": "7000"
     }
   ],
   "Toyota": [
     {
-      "id": "fc26",
-      "Url": "https://autoshowtv.com.mx/wp-content/uploads/2023/12/Supra-Mk4-2.jpg",
+      "id": "3e6b",
+      "Url": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_12dcd850261247fa9ef9be8019c2285b.jpg",
       "marca": "Toyota",
-      "año": "2019",
-      "precio": "78.000"
+      "año": "2010",
+      "precio": "6500"
+    },
+    {
+      "id": "d404",
+      "Url": "https://cdn-api.toyotacr.com/toyotacr_website/uploads/gallery/6240accad660e004f08cb663cd80bfa6771e5d8d.png",
+      "marca": "Toyota",
+      "año": "2011",
+      "precio": "5.500"
     }
   ]
 }
