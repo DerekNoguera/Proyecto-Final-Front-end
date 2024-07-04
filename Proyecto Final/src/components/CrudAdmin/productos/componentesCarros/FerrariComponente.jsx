@@ -2,18 +2,42 @@ import { useEffect, useState } from "react";
 import getFerrari from "../../../../services/Carros/Ferrari/getFerrari";
 function FerrariComponente() {
     const [items, setCarros] = useState([]);
+    const [filteredItems, setFilterItems] = useState([]);
+    const [yearFiltro, SetYear] = useState('');
+    const [PrecioFiltro, setPrice] = useState('');
     useEffect(() => {
         datos();
     }, []);
     const datos = async () => {
         const datosFerrari = await getFerrari();
-
         setCarros(datosFerrari);
+        setFilterItems(datosFerrari)
     };
+    useEffect(() => {
+        AplicarFiltros();
+      }, [items, yearFiltro, PrecioFiltro]);
+    
+
+    const AplicarFiltros = () =>{
+        let filtrar = items;
+        if (yearFiltro) {
+          filtrar = filtrar.filter(item => item.año.toString().includes(yearFiltro));
+        }
+    
+        if (PrecioFiltro) {
+          filtrar = filtrar.filter(item => item.precio <= parseFloat(PrecioFiltro) || item.precio == parseFloat(PrecioFiltro));
+        }
+        setFilterItems(filtrar);
+    }
     return (
+        <>
+        <div className="divFilter">
+          <input  type="text" className="filtro"  placeholder="Filtrar por año"  value={yearFiltro}  onChange={(e) => SetYear(e.target.value)}  />
+         <input  type="number" className="filtro"  placeholder="Precio máximo"  value={PrecioFiltro}  onChange={(e) => setPrice(e.target.value)}  />
+        </div>
         <div>
             <div className="divsCarros">
-                {items.map((item) => (
+                {filteredItems.map((item) => (
                     <div className="divContenido" key={item.id}>
                         <div>
                             <img className="imgCarros" src={item.Url} alt="" />
@@ -29,6 +53,8 @@ function FerrariComponente() {
                 ))}
             </div>
         </div>
+        </>
+        
     );
 }
 
