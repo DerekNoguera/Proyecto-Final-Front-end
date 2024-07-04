@@ -27,7 +27,11 @@ function NissanMostrar() {
   };
 
   const eliminarNissan = async (id) => {
-    await deleteNissan(id);
+    if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
+      await deleteNissan(id);
+    } else {
+      return false
+    }
     datos();
   };
   const BotonEditar = (item) => {
@@ -38,8 +42,12 @@ function NissanMostrar() {
     setModalAbierto(true);
   };
   const enviarDatos = async () => {
-    await putNissan(imageUrl, Year, Price, Nissan, id);
-    setModalAbierto(false);
+    if (imageUrl.trim() === '' || Year.trim() === '' || Price.trim() === '') {
+      alert("No puede dejar campos vacios!")
+    } else {
+      await putNissan(imageUrl, Year, Price, Nissan, id);
+      setModalAbierto(false);
+    }
     datos();
   };
   const closeModal = () => {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import   getFerrari  from "../../../../services/Carros/Ferrari/getFerrari";
+import getFerrari from "../../../../services/Carros/Ferrari/getFerrari";
 import deleteFerrari from '../../../../services/Carros/Ferrari/deleteFerrari';
 import putFerrari from "../../../../services/Carros/Ferrari/putFerrari"
 import "./carros.css";
@@ -19,18 +19,25 @@ function FerrariMostrar() {
     setCarros(datosFerrari);
   };
   const eliminarFerrari = async (id) => {
-    deleteFerrari(id)
-    setTimeout(() => {
-      datos()
-    }, 100)
+    if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
+      deleteFerrari(id)
+    } else {
+      return false
+    }
+    datos();
   }
   const enviarDatos = async () => {
-    await putFerrari( imageUrl, Year, Price, Ferrari, id);
-    setModalAbierto(false);
+    if (imageUrl.trim() === '' || Year.trim() === '' || Price.trim() === '') {
+      alert("No puede dejar campos vacios!")
+    } else {
+      await putFerrari(imageUrl, Year, Price, Ferrari, id);
+      setModalAbierto(false);
+    }
+
     datos();
   };
   const BotonEditar = (item) => {
-    setID(item.id); 
+    setID(item.id);
     setImageUrl(item.Url);
     setYear(item.año);
     setPrice(item.precio);
@@ -52,17 +59,17 @@ function FerrariMostrar() {
               <img className="imgCarros" src={item.Url} alt="" />
             </div>
             <div className="divDescription">
-            <div className="div2Carros">
+              <div className="div2Carros">
                 <h6 className="h6Txt">{item.marca}</h6>
                 <p className="precio">{item.año}</p>
                 <p className="precio2">{"$" + item.precio}</p>
               </div>
-            <div>
-            <div className="divInpCrud">
-            <input className="Inpdelete" onClick={() => eliminarFerrari(item.id)} type="button" value="Eliminar" />
-            <input className="Editar" onClick={() => BotonEditar(item)} type="button" value="Editar" />
-            </div>
-            </div>
+              <div>
+                <div className="divInpCrud">
+                  <input className="Inpdelete" onClick={() => eliminarFerrari(item.id)} type="button" value="Eliminar" />
+                  <input className="Editar" onClick={() => BotonEditar(item)} type="button" value="Editar" />
+                </div>
+              </div>
             </div>
           </div>
         ))}
@@ -85,7 +92,7 @@ function FerrariMostrar() {
                 <div className="mini2">
                   <input className="cerrarModal" onClick={closeModal} type="button" value="X" />
                   <div>
-                  <option  className='inpPost' value={Ferrari} onChange={(e) => setFerrari(e.target.value)}>Ferrari</option>
+                    <option className='inpPost' value={Ferrari} onChange={(e) => setFerrari(e.target.value)}>Ferrari</option>
                     <input className="inpPost" type="text" placeholder="URL de la Imagen" value={imageUrl} onChange={handleInputChange} />
                     <input className="inpPost" type="text" placeholder="Year" value={Year} onChange={(e) => setYear(e.target.value)} />
                     <input className="inpPost" type="text" placeholder="Precio en USD" value={Price} onChange={(e) => setPrice(e.target.value)}
@@ -97,9 +104,9 @@ function FerrariMostrar() {
           </div>
         )}
       </div>
-      
+
     </div>
-    
+
   );
 }
 

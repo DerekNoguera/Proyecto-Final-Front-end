@@ -20,10 +20,12 @@ function ToyotaMostrar() {
     setCarros(datosNissan);
   };
   const eliminarToyota = async (id) => {
-    deleteToyota(id);
-    setTimeout(() => {
-      datos();
-    }, 100);
+    if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
+      deleteToyota(id);
+    } else {
+      return false
+    }
+    datos();
   };
   const BotonEditar = (item) => {
     setID(item.id);
@@ -33,8 +35,12 @@ function ToyotaMostrar() {
     setModalAbierto(true);
   };
   const enviarDatos = async () => {
-    await putToyota(imageUrl, Year, Price, Toyota, id);
-    setModalAbierto(false);
+    if (imageUrl.trim() === '' || Year.trim() === '' || Price.trim() === '') {
+      alert("No puede dejar campos vacios!")
+    } else {
+      await putToyota(imageUrl, Year, Price, Toyota, id);
+      setModalAbierto(false);
+    }
     datos();
   };
   const closeModal = () => {
@@ -53,9 +59,9 @@ function ToyotaMostrar() {
               <img className="imgCarros" src={item.Url} alt="" />
             </div>
             <div className="divDescription">
-            <div className="div2Carros">
+              <div className="div2Carros">
                 <h6 className="h6Txt">{item.marca}</h6>
-                <p className="precio">{item.año }</p>
+                <p className="precio">{item.año}</p>
                 <p className="precio2">{"$" + item.precio}</p>
               </div>
               <div className="divInpCrud">
