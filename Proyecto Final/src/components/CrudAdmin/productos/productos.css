@@ -117,3 +117,23 @@
 .pecioMostrar2{
     color: white;
 }
+.filtro{
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 200px;
+}
+.filtro:focus{
+    outline: none; 
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.divFilter{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center   ;
+}

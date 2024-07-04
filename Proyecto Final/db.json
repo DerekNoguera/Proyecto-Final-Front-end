@@ -21,13 +21,6 @@
       "marca": "Nissan",
       "año": "2010",
       "precio": "45.999"
-    },
-    {
-      "id": "d559",
-      "Url": "2012",
-      "marca": "Nissan",
-      "año": "2012",
-      "precio": "12"
     }
   ],
   "Ferrari": [
@@ -43,16 +36,37 @@
     {
       "Url": "https://hips.hearstapps.com/hmg-prod/images/2025-lamborghini-urus-phev-101-66292cabec3a8.jpg?crop=0.688xw:0.583xh;0.204xw,0.338xh&resize=1200:*",
       "año": "2019",
-      "precio": "210.000",
+      "precio": "210 000",
       "marca": "Lamborghini",
       "id": "16fe"
     },
     {
       "Url": "https://cdn-images.motor.es/image/m/1100w.webp/fotos-noticias/2024/04/lamborghini-2024101358-1712338567_1.jpg",
       "año": "2022",
-      "precio": "200.000",
+      "precio": "200 000",
       "marca": "Lamborghini",
       "id": "5fda"
+    },
+    {
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/2015_Lamborghini_Huracan_LP610-4_%2819884965832%29.jpg",
+      "año": "2022",
+      "precio": "280 000",
+      "marca": "Lamborghini",
+      "id": "5bb2"
+    },
+    {
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/2023_Lamborghini_Aventador_Ultimae.jpg",
+      "año": "2021",
+      "precio": "320 000",
+      "marca": "Lamborghini",
+      "id": "e03e"
+    },
+    {
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/2023_Lamborghini_Aventador_Ultimae.jpg/1920px-2023_Lamborghini_Aventador_Ultimae.jpg",
+      "año": "2022",
+      "precio": "400 000",
+      "marca": "Lamborghini",
+      "id": "0418"
     }
   ],
   "Chevrolet": [],
