@@ -117,3 +117,8 @@ color: black;
   margin-top: -10%;
   margin-left: 2%;
 }
+.divEliminar{
+  background-color: lightblue;
+  width: 50%;
+  height: 200px;
+}

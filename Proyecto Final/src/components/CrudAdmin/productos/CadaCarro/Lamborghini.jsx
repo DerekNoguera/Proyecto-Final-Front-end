@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import  getLambo  from "../../../../services/Carros/Lambo/getLambo";
+import getLambo from "../../../../services/Carros/Lambo/getLambo";
 import deleteLambo from '../../../../services/Carros/Lambo/deleteLambo'
 import putLambo from '../../../../services/Carros/Lambo/putLambo'
 import "./carros.css";
@@ -20,21 +20,28 @@ function LamborghiniMostrar() {
     console.log(datosLambo);
   };
   const eliminarLambo = async (id) => {
-    deleteLambo(id)
-    setTimeout(() => {
-      datos()
-    }, 100)
+    if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
+      deleteLambo(id)
+    } else {
+      return false
+    }
+    datos();
   }
   const BotonEditar = (item) => {
-    setID(item.id); 
+    setID(item.id);
     setImageUrl(item.Url);
     setYear(item.año);
     setPrice(item.precio);
     setModalAbierto(true);
   };
   const enviarDatos = async () => {
-    await putLambo( imageUrl, Year, Price, Lamborghini, id);
-    setModalAbierto(false);
+    if (imageUrl.trim() === '' || Year.trim() === '' || Price.trim() === '') {
+      alert("No puede dejar campos vacios!")
+    } else {
+      await putLambo(imageUrl, Year, Price, Lamborghini, id);
+      setModalAbierto(false);
+    }
+
     datos();
   };
   const closeModal = () => {
@@ -52,17 +59,17 @@ function LamborghiniMostrar() {
               <img className="imgCarros" src={item.Url} alt="" />
             </div>
             <div className="divDescription">
-            <div className="div2Carros">
+              <div className="div2Carros">
                 <h6 className="h6Txt">{item.marca}</h6>
                 <p className="precio">{item.año}</p>
                 <p className="precio2">{"$" + item.precio}</p>
               </div>
-            <div>
-            <div className="divInpCrud">
-            <input className="Inpdelete" onClick={() => eliminarToyota(item.id)} type="button" value="Eliminar" />
-            <input className="Editar" onClick={() => BotonEditar(item)} type="button" value="Editar" />
-            </div>
-            </div>
+              <div>
+                <div className="divInpCrud">
+                  <input className="Inpdelete" onClick={() => eliminarLambo(item.id)} type="button" value="Eliminar" />
+                  <input className="Editar" onClick={() => BotonEditar(item)} type="button" value="Editar" />
+                </div>
+              </div>
             </div>
           </div>
         ))}
@@ -85,7 +92,7 @@ function LamborghiniMostrar() {
                 <div className="mini2">
                   <input className="cerrarModal" onClick={closeModal} type="button" value="X" />
                   <div>
-                  <option  className='inpPost' value={Lamborghini} onChange={(e) => setLamborghini(e.target.value)}>Lamborghini</option>
+                    <option className='inpPost' value={Lamborghini} onChange={(e) => setLamborghini(e.target.value)}>Lamborghini</option>
                     <input className="inpPost" type="text" placeholder="URL de la Imagen" value={imageUrl} onChange={handleInputChange} />
                     <input className="inpPost" type="text" placeholder="Year" value={Year} onChange={(e) => setYear(e.target.value)} />
                     <input className="inpPost" type="text" placeholder="Precio en USD" value={Price} onChange={(e) => setPrice(e.target.value)}

@@ -22,60 +22,60 @@ function Productos1() {
   const handleInputChange = (event) => {
     setImageUrl(event.target.value);
   };
-  
+
   const enviarDatos = async () => {
-    if (Marca == Nissan) {
-      postNissan(imageUrl, Marca, Year, Price,)
-      alert("Posteo Exitoso")
-      setMarca("")
-      setYear("")
-      setPrice("")
-      setImageUrl("")
-    }else if (Marca === Ferrari) {
-      postFerrari(imageUrl, Marca, Year, Price,)
-      alert("Posteo Exitoso")
-      setMarca("")
-      setYear("")
-      setPrice("")
-      setImageUrl("")
-    }
-    else if (Marca === Lamborghini) {
-      postLambo(imageUrl, Marca, Year, Price,)
-      alert("Posteo Exitoso")
-      setMarca("")
-      setYear("")
-      setPrice("")
-      setImageUrl("")
-    }
-    else if (Marca === Chevrolet) {
-      postChevrolet(imageUrl, Marca, Year, Price,)
-      alert("Posteo Exitoso")
-      setMarca("")
-      setYear("")
-      setPrice("")
-      setImageUrl("")
-    }
-    else if (Marca === Honda) {
-      postHonda(imageUrl, Marca, Year, Price,)
-      alert("Posteo Exitoso")
-      setMarca("")
-      setYear("")
-      setPrice("")
-      setImageUrl("")
-    }
-    else if (Marca === Toyota) {
-      postToyota(imageUrl, Marca, Year, Price,)
-      alert("Posteo Exitoso")
-      setMarca("")
-      setYear("")
-      setPrice("")
-      setImageUrl("")
-    }
-  //  if ( Year.trim()|| Price.trim() || imageUrl.trim()) {
-  //   alert("No puedes dejar campos incompletos")
-  //  }else{
-    
-  //  }  
+    if (imageUrl.trim() === "" || Price.trim() === "" || Year.trim() === "") {
+      alert("Todos los campos son obligatorios");
+      return;
+    } else {
+      if (Marca == Nissan) {
+        postNissan(imageUrl, Marca, Year, Price,)
+        alert("Posteo Exitoso")
+        setMarca("")
+        setYear("")
+        setPrice("")
+        setImageUrl("")
+      } else if (Marca === Ferrari) {
+        postFerrari(imageUrl, Marca, Year, Price,)
+        alert("Posteo Exitoso")
+        setMarca("")
+        setYear("")
+        setPrice("")
+        setImageUrl("")
+      }
+      else if (Marca === Lamborghini) {
+        postLambo(imageUrl, Marca, Year, Price,)
+        alert("Posteo Exitoso")
+        setMarca("")
+        setYear("")
+        setPrice("")
+        setImageUrl("")
+      }
+      else if (Marca === Chevrolet) {
+        postChevrolet(imageUrl, Marca, Year, Price,)
+        alert("Posteo Exitoso")
+        setMarca("")
+        setYear("")
+        setPrice("")
+        setImageUrl("")
+      }
+      else if (Marca === Honda) {
+        postHonda(imageUrl, Marca, Year, Price,)
+        alert("Posteo Exitoso")
+        setMarca("")
+        setYear("")
+        setPrice("")
+        setImageUrl("")
+      }
+      else if (Marca === Toyota) {
+        postToyota(imageUrl, Marca, Year, Price,)
+        alert("Posteo Exitoso")
+        setMarca("")
+        setYear("")
+        setPrice("")
+        setImageUrl("")
+      }
+    }  
   }
   const openModal = () => {
     setModalAbierto(true);
@@ -90,7 +90,7 @@ function Productos1() {
       <div>
         {/* <input onClick={PostDatosCars} className='agregarProducto' type="button" value="asas" /> */}
         <input onClick={openModal} className='agregarProducto' type="button" value="+" />
-       </div>
+      </div>
 
       <div className="App">
         {AbrirModal && ( // si abrirModal es verdadadero entonces ejecuta lo siguiente
@@ -100,7 +100,7 @@ function Productos1() {
                 <div className='mini1'>
                   <div className='divImg'>
                     {imageUrl && (
-                      <img className='imgPost' src={imageUrl} alt="Imagen"/>
+                      <img className='imgPost' src={imageUrl} alt="Imagen" />
                     )}
                   </div>
                   <div>
@@ -111,14 +111,14 @@ function Productos1() {
                   <input className="cerrarModal" onClick={closeModal} type="button" value="X" />
                   <div>
                     <input className='inpPost' type="text" placeholder='URL de la Imagen' value={imageUrl} onChange={handleInputChange} />
-                    <select  className='inpPost' placeholder='Marca' value={Marca} onChange={(e) => setMarca(e.target.value)} name="" id="">
-                    <option  className='colorOptions' >Elige el carro</option>
-                    <option  className='colorOptions' value={Nissan} onChange={(e) => setNissan(e.target.value)}>Nissan</option>
-                    <option  className='colorOptions' value={Ferrari} onChange={(e) => setFerrari(e.target.value)}>Ferrari</option>
-                    <option  className='colorOptions' value={Lamborghini} onChange={(e) => setLamborghini(e.target.value)}>Lamborghini</option>
-                    <option  className='colorOptions' value={Chevrolet} onChange={(e) => setChevrolet(e.target.value)}>Chevrolet</option>
-                    <option  className='colorOptions' value={Honda} onChange={(e) => setHonda(e.target.value)}>Honda</option>
-                    <option  className='colorOptions' Value={Toyota} onChange={(e) => setToyota(e.target.value)}>Toyota</option>
+                    <select className='inpPost' placeholder='Marca' value={Marca} onChange={(e) => setMarca(e.target.value)} name="" id="">
+                      <option className='colorOptions' >Elige el carro</option>
+                      <option className='colorOptions' value={Nissan} onChange={(e) => setNissan(e.target.value)}>Nissan</option>
+                      <option className='colorOptions' value={Ferrari} onChange={(e) => setFerrari(e.target.value)}>Ferrari</option>
+                      <option className='colorOptions' value={Lamborghini} onChange={(e) => setLamborghini(e.target.value)}>Lamborghini</option>
+                      <option className='colorOptions' value={Chevrolet} onChange={(e) => setChevrolet(e.target.value)}>Chevrolet</option>
+                      <option className='colorOptions' value={Honda} onChange={(e) => setHonda(e.target.value)}>Honda</option>
+                      <option className='colorOptions' Value={Toyota} onChange={(e) => setToyota(e.target.value)}>Toyota</option>
                     </select>
                     <input className='inpPost' type="text" placeholder='Year' value={Year} onChange={(e) => setYear(e.target.value)} />
                     <input className='inpPost' type="text" placeholder='Precio en USD' value={Price} onChange={(e) => setPrice(e.target.value)} />

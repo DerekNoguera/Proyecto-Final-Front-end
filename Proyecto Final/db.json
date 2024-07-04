@@ -16,11 +16,18 @@
   ],
   "Nissan": [
     {
-      "id": "b7d2",
-      "Url": "https://www.dmegtclub.com/wp-content/uploads/2021/01/Nissan-GTR-R35-02.jpg",
+      "id": "8423",
+      "Url": "https://img.remediosdigitales.com/e07b54/captura-de-pantalla-2022-08-26-a-las-17.38.32/1366_2000.jpeg",
       "marca": "Nissan",
-      "año": "2022",
-      "precio": "27.999"
+      "año": "2010",
+      "precio": "45.999"
+    },
+    {
+      "id": "d559",
+      "Url": "2012",
+      "marca": "Nissan",
+      "año": "2012",
+      "precio": "12"
     }
   ],
   "Ferrari": [
@@ -28,79 +35,50 @@
       "marca": "Ferrari",
       "Url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/F40_Ferrari_20090509.jpg",
       "año": "2012",
-      "precio": "17.099",
+      "precio": "17.999",
       "id": "2dce"
-    },
-    {
-      "marca": "Ferrari",
-      "Url": "https://cdn.ferrari.com/cms/network/media/img/resize/5de8bc007953932d566b36d0-ferrari-f40-1987-history-desk-22?width=1920&height=1080",
-      "precio": "13.999",
-      "año": "2022",
-      "id": "478c"
-    },
-    {
-      "id": "be45",
-      "Url": "https://www.dmegtclub.com/wp-content/uploads/2021/01/Nissan-GTR-R35-02.jpg",
-      "marca": "Ferrari",
-      "año": "2022",
-      "precio": "27.999"
     }
   ],
   "Lamborghini": [
     {
       "Url": "https://hips.hearstapps.com/hmg-prod/images/2025-lamborghini-urus-phev-101-66292cabec3a8.jpg?crop=0.688xw:0.583xh;0.204xw,0.338xh&resize=1200:*",
-      "precio": "240.000",
+      "año": "2019",
+      "precio": "210.000",
       "marca": "Lamborghini",
-      "año": "2022",
-      "id": "01d1"
-    }
-  ],
-  "Chevrolet": [
-    {
-      "id": "2e55",
-      "Url": "https://img.remediosdigitales.com/5f4971/chevrolet-silverado_hd-2024-1600-03/1366_2000.jpg",
-      "marca": "Chevrolet",
-      "año": "2022",
-      "precio": "78.000"
+      "id": "16fe"
     },
     {
-      "marca": "Ferrari",
-      "Url": "https://img.remediosdigitales.com/5f4971/chevrolet-silverado_hd-2024-1600-03/1366_2000.jpg",
-      "precio": "100.000",
+      "Url": "https://cdn-images.motor.es/image/m/1100w.webp/fotos-noticias/2024/04/lamborghini-2024101358-1712338567_1.jpg",
       "año": "2022",
-      "id": "2fac"
+      "precio": "200.000",
+      "marca": "Lamborghini",
+      "id": "5fda"
     }
   ],
+  "Chevrolet": [],
   "Honda": [
     {
-      "Url": "https://es.nissanusa.com/content/dam/Nissan/us/vehicles/sentra/2024/overview/PFA/2024-nissan-sentra-blue-driveway-front-building-d.jpg",
-      "precio": "6700",
+      "id": "bccc",
+      "Url": "https://hips.hearstapps.com/hmg-prod/images/2008-honda-s2000-cr-1k-bat-31-1588148686.jpeg?crop=0.801xw:0.674xh;0.0606xw,0.259xh&resize=2048:*",
       "marca": "Honda",
-      "año": "2022",
-      "id": "c378"
+      "año": "2014",
+      "precio": "25.000"
+    },
+    {
+      "id": "9810",
+      "Url": "https://hips.hearstapps.com/hmg-prod/images/2023-lightning-lap-honda-civic-type-r-mu-102-1675451016.jpg?crop=0.492xw:0.416xh;0.202xw,0.391xh&resize=1200:*",
+      "marca": "Honda",
+      "año": "2018",
+      "precio": "21.000"
     }
   ],
   "Toyota": [
     {
-      "Url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Nissan_NP300_Navara_DoubleCab.jpg",
-      "precio": "12.000",
+      "Url": "https://hips.hearstapps.com/hmg-prod/images/toyota-supra-2-0l-turbo-2020-1600-01-1579020934.jpg?resize=2048:*",
+      "año": "2012",
+      "precio": "45.999",
       "marca": "Toyota",
-      "año": "2022",
-      "id": "1030"
-    },
-    {
-      "id": "799c",
-      "Url": "ajshajksa",
-      "marca": "Toyota",
-      "año": "2022",
-      "precio": "211.222"
-    },
-    {
-      "Url": "https://cdn.motor1.com/images/mgl/PKZQL/s3/1997-toyota-supra-sold-for-176-000-at-auction.jpg",
-      "año": "2021",
-      "precio": "12.999",
-      "marca": "Toyota",
-      "id": "3c1a"
+      "id": "14b9"
     }
   ]
 }
