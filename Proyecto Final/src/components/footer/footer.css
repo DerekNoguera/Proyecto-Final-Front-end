@@ -1,0 +1,58 @@
+.containerFooter{
+   height: 60vh;
+   width: 100%;
+   display: grid;
+   place-items: center;
+   /* border-top: white solid 1px; */
+}
+.containerInterior{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 95%;
+    height: 95%;
+}
+.div1Mayor{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+.div2Mayor{
+    display: grid;
+    place-items: center;
+}
+.divs{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    width: 90%;
+    height: 40%;
+}
+.divs1{
+    display: grid;
+    place-items: center;
+    width: 90%;
+    height: 90%;
+
+}
+.divRedesFooter{
+    display: grid;
+    place-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.300);
+    width: 95%;
+    height: 100%;
+}
+.redesMenorDiv{
+   display: grid;
+   place-items: center;
+   width: 20%;
+   grid-template-columns: repeat(4,1fr);
+}
+.imgs{
+    width: 30px;
+    height: 30px;
+}
+.h5Footer{
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    text-decoration: none;
+}
