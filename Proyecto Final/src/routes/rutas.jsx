@@ -8,6 +8,7 @@ import AboutMe from "../pages/aboutMe";
 import Contactanos from "../pages/Contactanos";
 import PaginaErrorUser from "../components/paginaErrorUser";
 import PaginaAdmin from "../components/PaginaAdmin";
+import MensajesAdmi from "../pages/MensajesAdmi";
 // import Admin from "../pages/Admin";
 
 const Rutas = () => {
@@ -29,7 +30,7 @@ const Rutas = () => {
           </PaginaPriv>}/>
 
 
-
+            <Route path="/mensajes" element={<MensajesAdmi/>}/>
             <Route path="/Admin" element={<PaginaAdmin/>}/>
           <Route path="/aboutMe" element={<AboutMe/>}/>
           <Route path="/Contactanos" element={<Contactanos/>}/>

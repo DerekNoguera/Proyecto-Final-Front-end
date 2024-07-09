@@ -7,6 +7,8 @@ const Singinc = () => {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [txto, settxto] = useState("")
+  const [txto2, settxto2] = useState("")
   const navigate = useNavigate();// constante que me ayuda a navegar de paginas
 
   const perrito = async () => {
@@ -17,16 +19,17 @@ const Singinc = () => {
       //.some() busca si al menos 1 elemento de get existe
       //Si se encuentra un usario existente entonces se guarda en UsuarioExistente un true
       if (UsuarioExistente) {//si  UsuarioExistente entonces tira la alerta de abajo
-        alert(`Usuario "${user}" o email "${email}" existentes`);
+        settxto("User o Email existente")
       } else {// si no dice que inicio exitoso
-        alert("Registro exitoso, redirigiendo al login");
+        settxto2("Registro exitoso, redirigiendo al login")
+        settxto("")
         registerUser(user, email, password);// pone en el api los datos
         setTimeout(() => {
           navigate("/");//lo envia a la pagina
         }, 2000);
       }
     } else {
-      alert("No puedes dejar campos vacíos");
+     settxto("No puedes dejar campos vacios")
       //alerta
     }
   };
@@ -69,7 +72,10 @@ const Singinc = () => {
           required
           onChange={(e) => setPassword(e.target.value)}
         />
-        <br /><br /><br />
+        <br />
+        <h6 className="textoValidacion">{txto}</h6>
+        <h6 className="textoValidacion2">{txto2}</h6>
+        <br /><br />
         <input
           className="btnRegister"
           type="button"

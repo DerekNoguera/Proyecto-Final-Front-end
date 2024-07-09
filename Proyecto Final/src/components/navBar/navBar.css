@@ -6,7 +6,7 @@
     text-decoration: none;
     color: brown;
 }
-.bton{
+/* .bton{
     border: none;
     border-radius: 25px;
     border: solid black 1px;
@@ -21,19 +21,19 @@
     border: solid rgb(255, 255, 255) 1px;
     background-color: black;
     color: white;
-}
-/* .container-fluid{
-        /* background-color: ; */
-/* } */
+} */
+
 .nameProfile{
-    
     margin-left: -20%;
     font-size: 15px;
     font-weight: bold;
     color: rgb(0, 0, 0);
     text-decoration: none;
-    color: brown;
 }
 .div{
     margin-top: 2%;
+}
+.CerrarSesion{
+    text-decoration: none;
+    margin-top: 4%;
 }

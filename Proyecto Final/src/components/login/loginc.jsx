@@ -6,7 +6,8 @@ import "../register/singinc.css"
 const Loginc = () => {
   const [user, Cambiar1] = useState(); //se definen los valores de cambiar1 y cambiar2 como onChanmge
   const [password, Cambiar2] = useState(); //en una constante se pone el value de el input y el setvalue es para que lo setee
-
+  const [texto2, settexto2] = useState("")
+  const [texto, settexto] = useState("")
   const Navegar = useNavigate();
   const perrito = async () => {
     //ejecuta la funcion perrito de el boton'
@@ -23,11 +24,15 @@ const Loginc = () => {
           Navegar("/home");
         }, 2000);
         //me retorna un true a validarInicio para que tire la alerta
-      } 
+      } else{
+        settexto("User o contraseña incorrecta") //setea un texto al h6
+      }
     });
+    settexto("No puedes dejar campos en blanco") // dice que no puededejar campos en blancos
+    settexto2("") // setea un valor en blanco al texto2
     if (validarInicio) {
-      alert("Inicio Exitoso! Por favor espere.")
-      
+      settexto2("Inicio Exitoso! Por favor espere")
+      settexto("")
     }
     
   };
@@ -43,7 +48,10 @@ const Loginc = () => {
         <input className="inpTxt" type="text" placeholder="User" value={user} onChange={(e) => Cambiar1(e.target.value)} /><br /><br /><br />
         {/* // en el onChnage cambiar1 se llama y se ejecuta que a setValue, que setvalue es lo que se va a setear del input // setValue(e.target.value); */}
         <label className="labelLogin" htmlFor="">Password</label><br /><br />
-        <input className="inpTxt" type="password"  name="name" placeholder="password"  value={password}  onChange={(e) => Cambiar2(e.target.value)} /> <br /><br /><br />
+        <input className="inpTxt" type="password"  name="name" placeholder="password"  value={password}  onChange={(e) => Cambiar2(e.target.value)} /> <br />
+        <h6 className="textoValidacion">{texto}</h6>
+        <h6 className="textoValidacion2">{texto2}</h6>
+        <br /><br />
         <input className="btnLogin" type="button" value="Iniciar Sesion" onClick={perrito}  /><br /><br />
         {/* // funcion para el boton */}
         <button className="btnLogin"><Link className="btnRyL" to="/register"> Ir a registrarse</Link></button>

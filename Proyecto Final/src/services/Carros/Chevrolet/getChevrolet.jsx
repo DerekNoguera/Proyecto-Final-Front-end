@@ -6,4 +6,4 @@ import axios from "axios";
     return response.data;
 
 };
-export default getChevrolet
+export default {getChevrolet,}

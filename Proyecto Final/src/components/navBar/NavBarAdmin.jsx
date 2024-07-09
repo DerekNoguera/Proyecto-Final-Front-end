@@ -32,13 +32,13 @@ function NavbarFun() {
           </Nav>
           <Form className="d-flex">
             <div className='div'>
-               <Nav.Link><Link  to={"/Admin"} className='nameProfile'>Profile</Link> </Nav.Link>
+               <Nav.Link><Link  to={"/Admin"} className='nameProfile'>Admin</Link> </Nav.Link>
             </div>
             {/* <Form.Control type="search" placeholder="Search"  className="me-2"  aria-label="Search"  />
             <Button >Search</Button> */}
-             <input type="button" className='bton' value="Cerrar Sesion"
-              onClick={BorrarItem} variant="outline-success" />
-
+             {/* <input type="button" className='bton' value="Cerrar Sesion"
+              onClick={BorrarItem} variant="outline-success" /> */}
+               <h6 className='CerrarSesion' onClick={BorrarItem}>Cerrar Sesion</h6>  
           </Form>
         </Navbar.Collapse>
       </Container>
