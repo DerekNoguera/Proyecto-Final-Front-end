@@ -1,0 +1,37 @@
+.infoContainer{
+    width: 100%;
+    height: 91vh;
+    display: grid;
+    grid-template-columns: repeat(2);
+}
+.DivInf{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+.divsInfoInternos{
+
+    width: 96%;
+    height: 280px;
+    display: grid;
+    place-items: center;
+}
+.divAbout{
+    width: 95%;
+
+    margin-left: 2.5%;
+}
+.txtSobreNosotros{
+    font-size: 12px;
+    color: white;
+}
+.textoAboutUs{
+    color: white;
+}
+.imgAboutUs{
+    width: 600px;
+    height: 270px;
+    object-fit: cover;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}

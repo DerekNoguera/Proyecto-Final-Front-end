@@ -1,5 +1,24 @@
+import { useState } from "react"
 import "./ContactMeC.css"
+import postCorreos from "../../services/Correos/postCorreos"
 function ContactMe() {
+    const [nombre, setNombre] = useState("")//obtiene los datos
+    const [apellido, setApellido] = useState("")
+    const [email, setEmail] = useState("")
+    const [mensaje, setMensaje] = useState("")
+    const [texto, settexto] = useState("")
+    const EnviarMensaje = async () => {
+        //envia los dtos y los postea
+        postCorreos(nombre,apellido,email,mensaje)
+        setNombre("")
+        setApellido("")
+        setEmail("")
+        setMensaje("")
+        settexto("Mensaje Enviado")
+        setTimeout(() => {
+            settexto("")
+        }, 2000);
+    }
   return (
     <body className="body1">
         <div className="Container">
@@ -7,37 +26,35 @@ function ContactMe() {
         <div className="containerMenor">
             <h3>Contactanos</h3>
         </div><br />
-        <form action="https://formsubmit.co/dereknoguera9@gmail.com" method="POST">
         <div className="grid1">
             <div>
                 <label htmlFor="Nombre">Nombre</label><br />
-                <input className="inpTxt1" type="text" name="Nombre" />
+                <input value={nombre}  onChange={(e) => setNombre(e.target.value)} className="inpTxt1" type="text" name="Nombre" />
             </div>
             <div>
                 <label htmlFor="">Apellido</label><br />
-                <input className="inpTxt1" type="text" name="Apellido" />
+                <input value={apellido}  onChange={(e) => setApellido(e.target.value)} className="inpTxt1" type="text" name="Apellido" />
             </div>
         </div>
         <div className="grid2"><br/>
             <div>
                 <label htmlFor="Email *">Email *</label> <br />
-                <input className="inpTxt2"  type="text" name="Email" />
+                <input value={email}  onChange={(e) => setEmail(e.target.value)} className="inpTxt2"  type="text" name="Email" />
             </div><br />
             <div>   
                 <label htmlFor="">Escribe un mensaje</label><br /><br />
-                <input className="inpTxt2"  type="text" name="Mensaje" />
+                <input value={mensaje}  onChange={(e) => setMensaje(e.target.value)} className="inpTxt2"  type="text" name="Mensaje" />
             </div>
+            <h5 className="textoValidacion2">{texto}</h5>
         </div>
         <div className="grid3">
             <div>
-                <input type="submit" className="boton" value="Enviar" />
+                <input onClick={EnviarMensaje} type="submit" className="boton" value="Enviar" />
             </div>
             <div>
                 <h6 className="GraciasTxt">¡Gracias por su mensaje!</h6>
             </div>
         </div>
-        </form>
-        
       </div>
     </div>
     </body>

@@ -8,10 +8,12 @@ function CrudAdmin() {
 
   const mostrarProductos1 = () => {
     setMostrarComponente('componente1');
+    //cuando toca el boton se toque entonces a mostrar componente se le va a setear "componente1"
   };
 
   const mostrarProductos2 = () => {
     setMostrarComponente('componente2');
+      //cuando toca el boton se toque entonces a mostrar componente se le va a setear "componente2"
   };
 
   return (
@@ -19,6 +21,7 @@ function CrudAdmin() {
       <div className='container2'>
         <div className='grid'>
           <div className='articles'>
+            {/* si mostrarComponente es igual a "componente1" se muestra un componente y al contrario */}
             {mostrarComponente === 'componente1' && <Productos1 />}
             {mostrarComponente === 'componente2' && <Productos2 />}
           </div>
