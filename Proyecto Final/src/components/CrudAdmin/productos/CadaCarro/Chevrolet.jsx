@@ -1,16 +1,19 @@
+// La explicacion de este componente es la misma que la de el componente 
+//Toyota, el componente toyota esta en /componentes/CrudAdmin/CadaCarro/Toyotaa.jsx
 import { useEffect, useState } from "react";
 import deleteChevrolet from '../../../../services/Carros/Chevrolet/deleteChevrolet';
 import getChevrolet from "../../../../services/Carros/Chevrolet/getChevrolet";
 import "./carros.css";
 import putChevrolet from "../../../../services/Carros/Chevrolet/putChevrolet";
 function ChevroletMostrar() {
-  const [items, setCarros] = useState([]);
+  const [items, setCarros] = useState([]); // items es
   const [AbrirModal, setModalAbierto] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
   const [Year, setYear] = useState("");
   const [Price, setPrice] = useState("");
   const [id, setID] = useState(null)
   const [Chevrolet, setChevrolet] = useState('Ferrari')
+  const [EditExitoso, setEditExitoso] = useState('')
   useEffect(() => {
     datos();
   }, []);
@@ -25,10 +28,16 @@ function ChevroletMostrar() {
   }
   const enviarDatos = async () => {
     if (imageUrl.trim() === '' || Year.trim() === '' || Price.trim() === '') {
-      alert("No puede dejar campos vacios!")
+      setEditExitoso('No puedes dejar campos vacios')
     } else {
       await putChevrolet(imageUrl, Year, Price, Chevrolet, id);
-      setModalAbierto(false);
+       setTimeout(() => {
+        setModalAbierto(false);
+      }, 1000);
+      setTimeout(() => {
+        setEditExitoso('')
+      }, 1000);
+      setEditExitoso('Edit Exitoso')
     }
     datos();
   };
@@ -90,6 +99,7 @@ function ChevroletMostrar() {
                   </div>
                   <div>
                     <input className="btnAgregar" type="button" value="Editar" onClick={enviarDatos} />
+                    <h6 className="MsgAlerta">{EditExitoso}</h6>
                   </div>
                 </div>
                 <div className="mini2">

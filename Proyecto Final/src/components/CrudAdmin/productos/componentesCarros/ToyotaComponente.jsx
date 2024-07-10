@@ -8,7 +8,7 @@ function ToyotaComponente() {
     useEffect(() => {
         datos();
         AplicarFiltros();
-    }, [items, yearFiltro, PrecioFiltro])
+    }, [items, yearFiltro, PrecioFiltro,filteredItems])
     const datos = async () => {
         const datosToyota = await getToyota();
         setCarros(datosToyota);

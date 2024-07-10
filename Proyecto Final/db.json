@@ -16,18 +16,25 @@
   ],
   "Nissan": [
     {
-      "id": "8423",
       "Url": "https://img.remediosdigitales.com/e07b54/captura-de-pantalla-2022-08-26-a-las-17.38.32/1366_2000.jpeg",
       "marca": "Nissan",
       "año": "2010",
-      "precio": "45.999"
+      "precio": "89.000",
+      "id": "8423"
+    },
+    {
+      "id": "232f",
+      "Url": "https://es.nissanusa.com/content/dam/Nissan/us/vehicles/gtr/2024/site-simp/overview/pfa/2024-nissan-gt-r-sports-car-light-green-side-profile-view.jpg",
+      "marca": "Nissan",
+      "año": "2000",
+      "precio": "56.999"
     }
   ],
   "Ferrari": [
     {
       "marca": "Ferrari",
       "Url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/F40_Ferrari_20090509.jpg",
-      "año": "2012",
+      "año": "2019",
       "precio": "17.999",
       "id": "2dce"
     }
@@ -62,11 +69,11 @@
       "id": "e03e"
     },
     {
-      "Url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/2023_Lamborghini_Aventador_Ultimae.jpg/1920px-2023_Lamborghini_Aventador_Ultimae.jpg",
-      "año": "2022",
-      "precio": "400 000",
+      "id": "7793",
+      "Url": "https://www.diariomotor.com/imagenes/2021/07/lamborghini-aventador-blanco-769098-1280x853.webp",
       "marca": "Lamborghini",
-      "id": "0418"
+      "año": "2023",
+      "precio": "123.999"
     }
   ],
   "Chevrolet": [],
@@ -77,24 +84,9 @@
       "marca": "Honda",
       "año": "2014",
       "precio": "25.000"
-    },
-    {
-      "id": "9810",
-      "Url": "https://hips.hearstapps.com/hmg-prod/images/2023-lightning-lap-honda-civic-type-r-mu-102-1675451016.jpg?crop=0.492xw:0.416xh;0.202xw,0.391xh&resize=1200:*",
-      "marca": "Honda",
-      "año": "2018",
-      "precio": "21.000"
     }
   ],
-  "Toyota": [
-    {
-      "Url": "https://hips.hearstapps.com/hmg-prod/images/toyota-supra-2-0l-turbo-2020-1600-01-1579020934.jpg?resize=2048:*",
-      "año": "2012",
-      "precio": "45.999",
-      "marca": "Toyota",
-      "id": "14b9"
-    }
-  ],
+  "Toyota": [],
   "correos": [
     {
       "id": "2289",
@@ -102,6 +94,27 @@
       "Apellido": "Balot",
       "Email": "derek@gmail.com",
       "Mensaje": "jaja que mala app jajajaja"
+    },
+    {
+      "id": "7681",
+      "Nombre": "Derek",
+      "Apellido": "Balot",
+      "Email": "derek@gmail.com",
+      "Mensaje": "JAJAJ FEO"
+    },
+    {
+      "id": "511f",
+      "Nombre": "asas",
+      "Apellido": "Balot",
+      "Email": "derek@gmail.com",
+      "Mensaje": "asas"
+    },
+    {
+      "id": "8f22",
+      "Nombre": "Derek",
+      "Apellido": "Balot",
+      "Email": "derek@gmail.com",
+      "Mensaje": "ajajajjaaaj"
     }
   ]
 }

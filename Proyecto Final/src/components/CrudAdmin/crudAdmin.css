@@ -34,7 +34,7 @@
 .divsAside1{
     color: white;
     width: 36vh;
-    height: 41vh;
+    height: 25vh;
     /* border: 1px solid white; */
     border-right: 1px solid white;
     border-top: 1px solid white;
@@ -43,8 +43,14 @@
 .divsAside2{
     color: white;
     width: 36vh;
-    height: 41vh;
+    height: 25vh;
     /* border: 1px solid white; */
+    border-right: 1px solid white;
+}
+.divsAside3{
+    color: white;
+    width: 36vh;
+    height: 37vh;
     border-right: 1px solid white;
     border-bottom: 1px solid white;
    border-end-end-radius: 5%;

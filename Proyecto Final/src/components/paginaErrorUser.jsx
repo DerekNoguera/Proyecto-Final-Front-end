@@ -1,7 +1,7 @@
 
 function PaginaErrorUser() {
   return (
-    <div>Lo sentimos pero no puedes acceder a esta pagina</div>
+    <div>Lo sentimos, no puedes acceder a esta pagina</div>
   )
 }
 

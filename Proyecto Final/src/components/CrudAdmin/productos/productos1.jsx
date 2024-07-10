@@ -19,8 +19,16 @@ function Productos1() {
   const [Chevrolet, setChevrolet] = useState('Chevrolet')
   const [Honda, setHonda] = useState('Honda')
   const [Toyota, setToyota] = useState('Toyota')
-  const handleInputChange = (event) => {
-    setImageUrl(event.target.value);
+  const UrlRegla = /^(ftp|http|https):\/\/[^ "]+$/
+  const handleInputChange = (e) => {
+    // la const URL va a ser igual a la URL que el Usuario ingreso en el input
+    const URL  = e.target.value 
+
+    if (UrlRegla.test(URL)) {
+      // si UrlRegla se testea URL para ver si el valor de el input cumple con UrlRegla 
+      setImageUrl(URL)
+      //se setea URL a ImgURL
+    }
   };
 
   const enviarDatos = async () => {
@@ -28,6 +36,8 @@ function Productos1() {
       alert("Todos los campos son obligatorios");
       return;
     } else {
+      //Busca donde entrar de acuerdo a las OPtions, si selecciono la option de Nissan
+      // si Marca es Iguala Nissan se le setea a Nissan los datos
       if (Marca == Nissan) {
         postNissan(imageUrl, Marca, Year, Price,)
         alert("Posteo Exitoso")
@@ -36,6 +46,7 @@ function Productos1() {
         setPrice("")
         setImageUrl("")
       } else if (Marca === Ferrari) {
+        // si no a ferrari
         postFerrari(imageUrl, Marca, Year, Price,)
         alert("Posteo Exitoso")
         setMarca("")
@@ -44,6 +55,7 @@ function Productos1() {
         setImageUrl("")
       }
       else if (Marca === Lamborghini) {
+        // si no a Lamborghini
         postLambo(imageUrl, Marca, Year, Price,)
         alert("Posteo Exitoso")
         setMarca("")
@@ -52,6 +64,7 @@ function Productos1() {
         setImageUrl("")
       }
       else if (Marca === Chevrolet) {
+        //si no a Chevrolet
         postChevrolet(imageUrl, Marca, Year, Price,)
         alert("Posteo Exitoso")
         setMarca("")
@@ -60,6 +73,7 @@ function Productos1() {
         setImageUrl("")
       }
       else if (Marca === Honda) {
+        // si no a Honda
         postHonda(imageUrl, Marca, Year, Price,)
         alert("Posteo Exitoso")
         setMarca("")
@@ -69,6 +83,7 @@ function Productos1() {
       }
       else if (Marca === Toyota) {
         postToyota(imageUrl, Marca, Year, Price,)
+        //Postea los datos a la Marca
         alert("Posteo Exitoso")
         setMarca("")
         setYear("")
@@ -78,10 +93,12 @@ function Productos1() {
     }  
   }
   const openModal = () => {
+    //retorna un true al modal para que se abra
     setModalAbierto(true);
   };
 
   const closeModal = () => {
+    // retorna un false al modal para que se cierre
     setModalAbierto(false);
   };
 
@@ -111,7 +128,9 @@ function Productos1() {
                   <input className="cerrarModal" onClick={closeModal} type="button" value="X" />
                   <div>
                     <input className='inpPost' type="text" placeholder='URL de la Imagen' value={imageUrl} onChange={handleInputChange} />
+                    {/* un input en el cual oy a poner la URL de la imagen  */}
                     <select className='inpPost' placeholder='Marca' value={Marca} onChange={(e) => setMarca(e.target.value)} name="" id="">
+                      {/* Crea un select Para elegir la Marca a la hora de Postearlo  */}
                       <option className='colorOptions' >Elige el carro</option>
                       <option className='colorOptions' value={Nissan} onChange={(e) => setNissan(e.target.value)}>Nissan</option>
                       <option className='colorOptions' value={Ferrari} onChange={(e) => setFerrari(e.target.value)}>Ferrari</option>
@@ -120,6 +139,7 @@ function Productos1() {
                       <option className='colorOptions' value={Honda} onChange={(e) => setHonda(e.target.value)}>Honda</option>
                       <option className='colorOptions' Value={Toyota} onChange={(e) => setToyota(e.target.value)}>Toyota</option>
                     </select>
+                    {/* Cuando se seleccione la option entonces el INPUT va a valer la option  */}
                     <input className='inpPost' type="text" placeholder='Year' value={Year} onChange={(e) => setYear(e.target.value)} />
                     <input className='inpPost' type="text" placeholder='Precio en USD' value={Price} onChange={(e) => setPrice(e.target.value)} />
                   </div>

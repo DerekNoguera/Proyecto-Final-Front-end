@@ -9,7 +9,7 @@ function LamboComponente() {
     useEffect(() => {
         datos();
         AplicarFiltros();
-    }, [items, yearFiltro, PrecioFiltro]);
+    }, [items, yearFiltro, PrecioFiltro,filteredItems]);
     const datos = async () => {
         const datosLambo = await getLambo();
         setCarros(datosLambo);

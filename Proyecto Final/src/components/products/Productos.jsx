@@ -11,11 +11,6 @@ function Productos() {
     useEffect(() => {
     console.log("hola");
       },[])
-
-
-
-   
-
   return (
     <div className="grid-container">
       <div className="container-productos">

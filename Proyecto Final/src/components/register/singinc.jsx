@@ -11,6 +11,13 @@ const Singinc = () => {
   const [txto2, settxto2] = useState("")
   const navigate = useNavigate();// constante que me ayuda a navegar de paginas
 
+  // const setEmail = () =>{
+  //   const URL  = e.target.value 
+
+  //   if (UrlRegla.test(URL) || URL === "") {
+  //     setEmail(URL)
+  //   }
+  // }
   const perrito = async () => {
     const get = await loginUser();//obtiene los datos de el api
 
@@ -74,6 +81,7 @@ const Singinc = () => {
         />
         <br />
         <h6 className="textoValidacion">{txto}</h6>
+        {/* campos de texto que iran cambiando de acuerdo a el useState */}
         <h6 className="textoValidacion2">{txto2}</h6>
         <br /><br />
         <input
@@ -81,11 +89,13 @@ const Singinc = () => {
           type="button"
           value="Register"
           onClick={perrito}
+          // funcion onclick para enviar los datos 
         />
         <br /><br />
         <button className="btnRegister">
           <Link className="btnRyL" to="/">
             Ir a iniciar sesión
+            {/* link para ir a el login  */}
           </Link>
         </button>
       </div>

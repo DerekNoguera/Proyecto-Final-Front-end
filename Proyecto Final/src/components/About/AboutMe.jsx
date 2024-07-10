@@ -1,5 +1,7 @@
 import "./aboutMe.css"
 function AboutMeC() {
+
+  // Paggina de Sobre Nosotros
   return (
     <div className="infoContainer">
       <div className="DivInf">
