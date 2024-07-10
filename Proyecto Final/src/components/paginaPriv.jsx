@@ -6,6 +6,7 @@ const PaginaPriv = ({children}) => { // funcion que va a validar si usuario de l
         return <Navigate to={"/error"}/>
     }
     return children
+    //deja que el flujo de la validacion siga
 };
 
 export default PaginaPriv

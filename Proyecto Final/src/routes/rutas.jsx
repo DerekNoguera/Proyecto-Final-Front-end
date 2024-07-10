@@ -8,7 +8,7 @@ import AboutMe from "../pages/aboutMe";
 import Contactanos from "../pages/Contactanos";
 import PaginaErrorUser from "../components/paginaErrorUser";
 import PaginaAdmin from "../components/PaginaAdmin";
-import MensajesAdmi from "../pages/MensajesAdmi";
+
 // import Admin from "../pages/Admin";
 
 const Rutas = () => {
@@ -16,21 +16,18 @@ const Rutas = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Login />} /> 
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Singin />} />
           <Route path="/error" element={<PaginaError/>}/>
           <Route path="noAdmin" element={<PaginaErrorUser/>}/>
           <Route path="/*" element={<PaginaError/>}/>
-
-
-          
+          {/* Cualquier otra pagina que no este registrada entonces lo navega a la pagina de error  */}
           <Route path="/home" element={<PaginaPriv>
+            {/* si PaginaPriv es falso entonces lo retorna a /error  */}
+            {/* si no, lo deja acceder a la pagina Home  */}
             <Home/>
           </PaginaPriv>}/>
-
-
-            <Route path="/mensajes" element={<MensajesAdmi/>}/>
             <Route path="/Admin" element={<PaginaAdmin/>}/>
           <Route path="/aboutMe" element={<AboutMe/>}/>
           <Route path="/Contactanos" element={<Contactanos/>}/>

@@ -1,3 +1,4 @@
+ 
 import { useEffect, useState } from "react";
 import getChevrolet from "../../../../services/Carros/Chevrolet/getChevrolet";
 function ChevroletComponent() {
@@ -8,7 +9,7 @@ function ChevroletComponent() {
     useEffect(() => {
         datos();
         AplicarFiltros();
-    }, [items, yearFiltro, PrecioFiltro]);
+    }, [items, yearFiltro, PrecioFiltro,filteredItems]);
 
     const datos = async () => {
         const datosChevrolet = await getChevrolet();

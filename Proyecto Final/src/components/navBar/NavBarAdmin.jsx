@@ -31,9 +31,9 @@ function NavbarFun() {
             <Nav.Link><Link to={"/home"} className='linkStyle'>Home</Link> </Nav.Link>
           </Nav>
           <Form className="d-flex">
-            <div className='div'>
+            {/* <div className='div'>
                <Nav.Link><Link  to={"/Admin"} className='nameProfile'>Admin</Link> </Nav.Link>
-            </div>
+            </div> */}
             {/* <Form.Control type="search" placeholder="Search"  className="me-2"  aria-label="Search"  />
             <Button >Search</Button> */}
              {/* <input type="button" className='bton' value="Cerrar Sesion"

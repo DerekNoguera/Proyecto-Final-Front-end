@@ -1,4 +1,7 @@
-import { useEffect, useState } from "react";
+// La explicacion de este componente es la misma que la de el componente 
+//Toyota, el componente toyota esta en /componentes/CrudAdmin/CadaCarro/Toyotaa.jsx 
+ 
+ import { useEffect, useState } from "react";
 import getNissan from "../../../../services/Carros/Nissan/getNissan";
 import putNissan from "../../../../services/Carros/Nissan/PutNissan";
 import deleteNissan from "../../../../services/Carros/Nissan/DeleteNissan";
@@ -12,6 +15,7 @@ function NissanMostrar() {
   const [Price, setPrice] = useState("");
   const [id, setID] = useState(null);
   const [Nissan, setNissan] = useState("Nissan");
+  const [EditExitoso, setEditExitoso] = useState('')
 
   const handleInputChange = (event) => {
     setImageUrl(event.target.value);
@@ -43,10 +47,16 @@ function NissanMostrar() {
   };
   const enviarDatos = async () => {
     if (imageUrl.trim() === '' || Year.trim() === '' || Price.trim() === '') {
-      alert("No puede dejar campos vacios!")
+      setEditExitoso('No puedes dejar campos vacios')
     } else {
       await putNissan(imageUrl, Year, Price, Nissan, id);
-      setModalAbierto(false);
+      setTimeout(() => {
+        setModalAbierto(false);
+      }, 1000);
+      setTimeout(() => {
+        setEditExitoso('')
+      }, 1000);
+      setEditExitoso('Edit Exitoso')
     }
     datos();
   };
@@ -106,6 +116,7 @@ function NissanMostrar() {
                       value="Editar"
                       onClick={enviarDatos}
                     />
+                    <h6 className="MsgAlerta">{EditExitoso}</h6>
                   </div>
                 </div>
                 <div className="mini2">

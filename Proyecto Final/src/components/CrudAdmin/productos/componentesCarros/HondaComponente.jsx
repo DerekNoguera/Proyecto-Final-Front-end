@@ -9,7 +9,7 @@ function HondaComponente() {
     useEffect(() => {
         datos();
         AplicarFiltros();
-    }, [items, yearFiltro, PrecioFiltro]);
+    }, [items, yearFiltro, PrecioFiltro,filteredItems]);
 
     const datos = async () => {
         const datosHonda = await getHonda();

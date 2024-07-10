@@ -1,3 +1,6 @@
+// La explicacion de este componente es la misma que la de el componente 
+//Toyota, el componente toyota esta en /componentes/CrudAdmin/CadaCarro/Toyotaa.jsx
+
 import { useEffect, useState } from "react";
 import getHonda from "../../../../services/Carros/Honda/getHonda";
 import deleteHonda from '../../../../services/Carros/Honda/deleteHonda'
@@ -11,6 +14,7 @@ function HondaMostrar() {
   const [Price, setPrice] = useState("");
   const [id, setID] = useState(null)
   const [Honda, setHonda] = useState('Honda')
+  const [EditExitoso, setEditExitoso] = useState('')
   useEffect(() => {
     datos();
   }, []);
@@ -35,10 +39,16 @@ function HondaMostrar() {
   };
   const enviarDatos = async () => {
     if (imageUrl.trim() === '' || Year.trim() === '' || Price.trim() === '') {
-      alert("No puede dejar campos vacios!")
+      setEditExitoso('No puedes dejar campos vacios')
     } else {
       await putHonda(imageUrl, Year, Price, Honda, id);
-      setModalAbierto(false);
+      setTimeout(() => {
+        setModalAbierto(false);
+      }, 1000);
+      setTimeout(() => {
+        setEditExitoso('')
+      }, 1000);
+      setEditExitoso('Edit Exitoso')
     }
     datos();
   };
@@ -87,6 +97,7 @@ function HondaMostrar() {
                   </div>
                   <div>
                     <input className="btnAgregar" type="button" value="Editar" onClick={enviarDatos} />
+                    <h6 className="MsgAlerta">{EditExitoso}</h6>
                   </div>
                 </div>
                 <div className="mini2">

@@ -40,9 +40,9 @@ function NavbarFun() {
             </NavDropdown>
           </Nav>
           <Form className="d-flex">
-            <div className='div'>
+            {/* <div className='div'>
                <Nav.Link><Link  to={"/Admin"} className='nameProfile'>Admin</Link> </Nav.Link>
-            </div>
+            </div> */}
          
             {/* <Form.Control
               type="search"
