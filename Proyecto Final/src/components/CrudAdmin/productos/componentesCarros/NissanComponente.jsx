@@ -16,7 +16,7 @@
 
     useEffect(() => {
       AplicarFiltros();
-    }, [filteredItems]);
+    }, [filteredItems,items,yearFiltro]);
   
 
     const datos = async () => {

@@ -19,7 +19,7 @@ function FerrariComponente() {
     };
     useEffect(() => {
         AplicarFiltros();
-      }, [filteredItems]);
+      }, [filteredItems,items,yearFiltro]);
     
 
     const AplicarFiltros = () =>{

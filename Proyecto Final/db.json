@@ -60,11 +60,11 @@
   ],
   "Ferrari": [
     {
-      "id": "d0df",
-      "Url": "https://acnews.blob.core.windows.net/imgnews/extralarge/NAZ_64423339aa5c4e71a772c52c0752134e.webp",
       "marca": "Ferrari",
+      "Url": "https://acnews.blob.core.windows.net/imgnews/extralarge/NAZ_64423339aa5c4e71a772c52c0752134e.webp",
       "año": "2022",
-      "precio": "75.000"
+      "precio": "67.090",
+      "id": "d0df"
     },
     {
       "id": "229e",
@@ -72,20 +72,6 @@
       "marca": "Ferrari",
       "año": "2019",
       "precio": "78.000"
-    },
-    {
-      "id": "0475",
-      "Url": "https://imageio.forbes.com/specials-images/imageserve/63e13dd372947ace1f4c9763/The-Ferrari-Purosangue---/960x0.jpg?format=jpg&width=1440",
-      "marca": "Ferrari",
-      "año": "2022",
-      "precio": "56,000"
-    },
-    {
-      "id": "04d8",
-      "Url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Ferrari_488_GTB_IMG_4120.jpg",
-      "marca": "Ferrari",
-      "año": "2019",
-      "precio": "200.000"
     }
   ],
   "Lamborghini": [
@@ -97,8 +83,24 @@
       "id": "16fe"
     }
   ],
-  "Chevrolet": [],
-  "Honda": [],
+  "Chevrolet": [
+    {
+      "marca": "Ferrari",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/2019_Chevrolet_Camaro_base%2C_front_11.9.19.jpg",
+      "año": "2018",
+      "precio": "27,999",
+      "id": "34d4"
+    }
+  ],
+  "Honda": [
+    {
+      "id": "639d",
+      "Url": "https://acnews.blob.core.windows.net/imgnews/large/NAZ_378bcb43cac842e89a693a08b5660005.webp",
+      "marca": "Honda",
+      "año": "2022",
+      "precio": "17.000"
+    }
+  ],
   "Toyota": [
     {
       "id": "0b89",
@@ -129,6 +131,13 @@
       "Apellido": "Noguera",
       "Email": "derek@gmail.com",
       "Mensaje": "Buena app bro ajaja"
+    },
+    {
+      "id": "21f7",
+      "Nombre": "Derek",
+      "Apellido": "Gonzalez",
+      "Email": "ere@gmail.com",
+      "Mensaje": "Hola"
     }
   ]
 }

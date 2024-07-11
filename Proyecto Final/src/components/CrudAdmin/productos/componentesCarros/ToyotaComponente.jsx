@@ -11,7 +11,7 @@ function ToyotaComponente() {
     useEffect(() => {
         datos();
         AplicarFiltros();
-    }, [filteredItems]) // el useEffect se ejecuta cada que hay un cambio en alguno de esos datos
+    }, [filteredItems,items,yearFiltro]) // el useEffect se ejecuta cada que hay un cambio en alguno de esos datos
 
 
     const datos = async () => {

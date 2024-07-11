@@ -11,7 +11,7 @@ function ChevroletComponent() {
     useEffect(() => {
         datos();
         AplicarFiltros();
-    }, [filteredItems]);
+    }, [filteredItems,items,yearFiltro]);
 
     const datos = async () => {
         const datosChevrolet = await getChevrolet();

@@ -11,6 +11,7 @@ function PaginaAdmin() {
       let Admin = await loginUser();
       // console.log(Admin);
       let id = localStorage.getItem("token2");
+      let id2 = localStorage.getItem("token")
       let UserAdmin = Admin[0];
       let IdAdmin = UserAdmin.id; // IdAdmin es el Id de el primer usuario registrado y el primer usuario registrado y es el admin
       // console.log(IdAdmin);z
@@ -19,6 +20,9 @@ function PaginaAdmin() {
       } else {
         setIsAdmin(false);
         //si no si, EsAdmin ahora sera falso
+      }
+      if (!id2) {
+        return <Navigate to={"/noAdmin"} />;
       }
     };
     AdminF();
