@@ -137,3 +137,9 @@ input[type=number]::-webkit-outer-spin-button {
     grid-template-columns: repeat(2, 1fr);
     place-items: center   ;
 }
+.MsgAlertaerror{
+    color: rgb(245, 70, 70);
+    font-size: 12px;
+    margin-left: 25%;
+
+}

@@ -20,6 +20,8 @@ function Productos1() {
   const [Honda, setHonda] = useState('Honda')
   const [Toyota, setToyota] = useState('Toyota')
   const UrlRegla = /^(ftp|http|https):\/\/[^ "]+$/
+  const [txtAlert, settxtAlert] = useState('')
+  const [msgAlertError, setmsgAlertError] = useState('')
   const handleInputChange = (e) => {
     // la const URL va a ser igual a la URL que el Usuario ingreso en el input
     const URL  = e.target.value 
@@ -33,14 +35,21 @@ function Productos1() {
 
   const enviarDatos = async () => {
     if (imageUrl.trim() === "" || Price.trim() === "" || Year.trim() === "") {
-      alert("Todos los campos son obligatorios");
+      setmsgAlertError('No puedes dejar espacios en blanco')
+      
+      setTimeout(() => {
+        setmsgAlertError('')
+      }, 1000);
+
       return;
     } else {
+      
       //Busca donde entrar de acuerdo a las OPtions, si selecciono la option de Nissan
       // si Marca es Iguala Nissan se le setea a Nissan los datos
       if (Marca == Nissan) {
         postNissan(imageUrl, Marca, Year, Price,)
-        alert("Posteo Exitoso")
+        settxtAlert('Posteo exitoso')
+        setmsgAlertError('')
         setMarca("")
         setYear("")
         setPrice("")
@@ -48,7 +57,8 @@ function Productos1() {
       } else if (Marca === Ferrari) {
         // si no a ferrari
         postFerrari(imageUrl, Marca, Year, Price,)
-        alert("Posteo Exitoso")
+        settxtAlert('Posteo exitoso')
+        setmsgAlertError('')
         setMarca("")
         setYear("")
         setPrice("")
@@ -57,7 +67,8 @@ function Productos1() {
       else if (Marca === Lamborghini) {
         // si no a Lamborghini
         postLambo(imageUrl, Marca, Year, Price,)
-        alert("Posteo Exitoso")
+        settxtAlert('Posteo exitoso')
+        setmsgAlertError('')
         setMarca("")
         setYear("")
         setPrice("")
@@ -66,7 +77,8 @@ function Productos1() {
       else if (Marca === Chevrolet) {
         //si no a Chevrolet
         postChevrolet(imageUrl, Marca, Year, Price,)
-        alert("Posteo Exitoso")
+        settxtAlert('Posteo exitoso')
+        setmsgAlertError('')
         setMarca("")
         setYear("")
         setPrice("")
@@ -75,7 +87,8 @@ function Productos1() {
       else if (Marca === Honda) {
         // si no a Honda
         postHonda(imageUrl, Marca, Year, Price,)
-        alert("Posteo Exitoso")
+        settxtAlert('Posteo exitoso')
+        setmsgAlertError('')
         setMarca("")
         setYear("")
         setPrice("")
@@ -84,13 +97,18 @@ function Productos1() {
       else if (Marca === Toyota) {
         postToyota(imageUrl, Marca, Year, Price,)
         //Postea los datos a la Marca
-        alert("Posteo Exitoso")
+        settxtAlert('Posteo exitoso')
+        setmsgAlertError('')
         setMarca("")
         setYear("")
         setPrice("")
         setImageUrl("")
       }
     }  
+    setTimeout(() => {
+      settxtAlert('')
+      setmsgAlertError('')
+    }, 1000);
   }
   const openModal = () => {
     //retorna un true al modal para que se abra
@@ -122,6 +140,8 @@ function Productos1() {
                   </div>
                   <div>
                     <input onClick={enviarDatos} className='btnAgregar' type="button" value="Agregar" />
+                    <h6 className='MsgAlerta'>{txtAlert}</h6>
+                    <h6 className='MsgAlertaerror'>{msgAlertError}</h6>
                   </div>
                 </div>
                 <div className='mini2'>

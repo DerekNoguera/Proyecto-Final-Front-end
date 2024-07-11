@@ -1,9 +1,14 @@
 import axios from "axios";
 
 export const getNissan = async () => {
-    const response = await axios.get(`http://localhost:3001/Nissan`, {
+    try {
+          const response = await axios.get(`http://localhost:3001/Nissan`, {
     });
     return response.data;
+    } catch (error) {
+        console.log(error);
+    }
+  
 
 };
 export default getNissan;

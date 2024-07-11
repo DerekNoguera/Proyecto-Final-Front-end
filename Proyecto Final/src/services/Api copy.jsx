@@ -1,5 +1,6 @@
 import axios from "axios";
 // import { response } from 'express';
+//GET, POST, PUT y DELETE de los users, de los carros y correos/mensajes de contactanos, con axios y algunos deletes con FETCH
 export const loginUser = async () => {
     const response = await axios.get("http://localhost:3000/api/aplicacion/", {
     });
