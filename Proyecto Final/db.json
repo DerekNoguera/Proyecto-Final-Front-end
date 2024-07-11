@@ -19,24 +19,59 @@
       "Url": "https://img.remediosdigitales.com/e07b54/captura-de-pantalla-2022-08-26-a-las-17.38.32/1366_2000.jpeg",
       "marca": "Nissan",
       "año": "2010",
-      "precio": "89.000",
+      "precio": "89.002",
       "id": "8423"
     },
     {
-      "id": "232f",
-      "Url": "https://es.nissanusa.com/content/dam/Nissan/us/vehicles/gtr/2024/site-simp/overview/pfa/2024-nissan-gt-r-sports-car-light-green-side-profile-view.jpg",
+      "id": "5629",
+      "Url": "https://cdn.motor1.com/images/mgl/eobzNK/s2/2024-nissan-gt-r-t-spec.webp",
       "marca": "Nissan",
-      "año": "2000",
-      "precio": "56.999"
+      "año": "2018",
+      "precio": "56.000"
+    },
+    {
+      "id": "edaf",
+      "Url": "https://cdn.motor1.com/images/mgl/2NAwyk/s2/2024-nissan-z-nismo.webp",
+      "marca": "Nissan",
+      "año": "2019",
+      "precio": "23.000"
+    },
+    {
+      "id": "dbdf",
+      "Url": "https://es.nissanusa.com/content/dam/Nissan/us/vehicles/discontinuedvehicles/370zCoupe/nissan-370z.jpg",
+      "marca": "Nissan",
+      "año": "2020",
+      "precio": "17.000"
+    },
+    {
+      "id": "cf2c",
+      "Url": "https://es.nissanusa.com/content/dam/Nissan/us/vehicles/nissan-z/2024/nismo/2024-nissan-z-nismo-front-view-race-track.jpg",
+      "marca": "Nissan",
+      "año": "2019",
+      "precio": "29.000"
+    },
+    {
+      "id": "b372",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Nuevo_Nissan_Sentra_2023.webp",
+      "marca": "Nissan",
+      "año": "2023",
+      "precio": "12.500"
     }
   ],
   "Ferrari": [
     {
       "marca": "Ferrari",
-      "Url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/F40_Ferrari_20090509.jpg",
+      "Url": "https://acnews.blob.core.windows.net/imgnews/extralarge/NAZ_64423339aa5c4e71a772c52c0752134e.webp",
+      "año": "2022",
+      "precio": "67.090",
+      "id": "d0df"
+    },
+    {
+      "id": "229e",
+      "Url": "https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2022/12/ferrari-laferrari-2904760.jpg?tf=1200x",
+      "marca": "Ferrari",
       "año": "2019",
-      "precio": "17.999",
-      "id": "2dce"
+      "precio": "78.000"
     }
   ],
   "Lamborghini": [
@@ -46,75 +81,63 @@
       "precio": "210 000",
       "marca": "Lamborghini",
       "id": "16fe"
-    },
-    {
-      "Url": "https://cdn-images.motor.es/image/m/1100w.webp/fotos-noticias/2024/04/lamborghini-2024101358-1712338567_1.jpg",
-      "año": "2022",
-      "precio": "200 000",
-      "marca": "Lamborghini",
-      "id": "5fda"
-    },
-    {
-      "Url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/2015_Lamborghini_Huracan_LP610-4_%2819884965832%29.jpg",
-      "año": "2022",
-      "precio": "280 000",
-      "marca": "Lamborghini",
-      "id": "5bb2"
-    },
-    {
-      "Url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/2023_Lamborghini_Aventador_Ultimae.jpg",
-      "año": "2021",
-      "precio": "320 000",
-      "marca": "Lamborghini",
-      "id": "e03e"
-    },
-    {
-      "id": "7793",
-      "Url": "https://www.diariomotor.com/imagenes/2021/07/lamborghini-aventador-blanco-769098-1280x853.webp",
-      "marca": "Lamborghini",
-      "año": "2023",
-      "precio": "123.999"
     }
   ],
-  "Chevrolet": [],
+  "Chevrolet": [
+    {
+      "marca": "Ferrari",
+      "Url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/2019_Chevrolet_Camaro_base%2C_front_11.9.19.jpg",
+      "año": "2018",
+      "precio": "27,999",
+      "id": "34d4"
+    }
+  ],
   "Honda": [
     {
-      "id": "bccc",
-      "Url": "https://hips.hearstapps.com/hmg-prod/images/2008-honda-s2000-cr-1k-bat-31-1588148686.jpeg?crop=0.801xw:0.674xh;0.0606xw,0.259xh&resize=2048:*",
+      "id": "639d",
+      "Url": "https://acnews.blob.core.windows.net/imgnews/large/NAZ_378bcb43cac842e89a693a08b5660005.webp",
       "marca": "Honda",
-      "año": "2014",
-      "precio": "25.000"
+      "año": "2022",
+      "precio": "17.000"
     }
   ],
-  "Toyota": [],
+  "Toyota": [
+    {
+      "id": "0b89",
+      "Url": "https://tmna.aemassets.toyota.com/is/image/toyota/toyota/vehicles/2024/grsupra/gallery/SUP_MY24_0003_V001_9eziPtOtJzf_0vDZD8a.png?fmt=jpeg&fit=crop&qlt=90&wid=1024",
+      "marca": "Toyota",
+      "año": "2019",
+      "precio": "34.900"
+    },
+    {
+      "id": "9e7c",
+      "Url": "https://imagenes.km77.com/fotos/bbtcontent/clippingnew/KM7KPH20201026_0001/full.jpg?_gl=1*13123qi*_ga*MTM0MzE2MzExOS4xNzE5ODEzNTY1*_ga_6YFP9YXPMX*MTcyMDY5MTk5Ny4yLjEuMTcyMDY5MjAwMi41NS4wLjA.",
+      "marca": "Toyota",
+      "año": "2019",
+      "precio": "47.000"
+    },
+    {
+      "Url": "https://imagenes.km77.com/fotos/bbtcontent/clippingnew/KM7KPH20231207_0045/full.jpg?_gl=1*13123qi*_ga*MTM0MzE2MzExOS4xNzE5ODEzNTY1*_ga_6YFP9YXPMX*MTcyMDY5MTk5Ny4yLjEuMTcyMDY5MjAwMi41NS4wLjA.",
+      "año": "2022",
+      "precio": "50.999",
+      "marca": "Toyota",
+      "id": "7dc0"
+    }
+  ],
   "correos": [
     {
-      "id": "2289",
+      "id": "197a",
       "Nombre": "Derek",
-      "Apellido": "Balot",
+      "Apellido": "Noguera",
       "Email": "derek@gmail.com",
-      "Mensaje": "jaja que mala app jajajaja"
+      "Mensaje": "Buena app bro ajaja"
     },
     {
-      "id": "7681",
+      "id": "21f7",
       "Nombre": "Derek",
-      "Apellido": "Balot",
-      "Email": "derek@gmail.com",
-      "Mensaje": "JAJAJ FEO"
-    },
-    {
-      "id": "511f",
-      "Nombre": "asas",
-      "Apellido": "Balot",
-      "Email": "derek@gmail.com",
-      "Mensaje": "asas"
-    },
-    {
-      "id": "8f22",
-      "Nombre": "Derek",
-      "Apellido": "Balot",
-      "Email": "derek@gmail.com",
-      "Mensaje": "ajajajjaaaj"
+      "Apellido": "Gonzalez",
+      "Email": "ere@gmail.com",
+      "Mensaje": "Hola"
     }
   ]
 }

@@ -6,27 +6,29 @@ import ChevroletMostrar from "../productos/CadaCarro/Chevrolet"
 import HondaMostrar from '../productos/CadaCarro/Honda';
 import ToyotaMostrar from '../productos/CadaCarro/Toyota';
 import { useState } from 'react';
+// llama a todos los componentes de los autos
 
 function Productos2() {
   const [CambiarComponente, setCambiarComponente] = useState("nissan");
-
+  //CambiarComponente es la const que va a cambiar los componentes, por defecto es nissan para que se muestre 
+  // el componente de Nissan
   const CambiarNissan = () => {
-    setCambiarComponente("nissan");
+    setCambiarComponente("nissan"); // si da click al onclick de Nissan entonces se setea Nissa a CambiarComponente
   }
   const CambiarFerrari = () => {
-    setCambiarComponente("ferrari");
+    setCambiarComponente("ferrari");// si da click al onclick de ferrari entonces se setea ferrari a CambiarComponente
   }
   const CambiarLambo = () => {
-    setCambiarComponente("lambo");
+    setCambiarComponente("lambo"); // si da click al onclick de lambo entonces se setea lambo a CambiarComponente
   }
   const CambiarChevrolet = () => {
-    setCambiarComponente("chevrolet");
+    setCambiarComponente("chevrolet"); // si da click al onclick de chevrolet entonces se setea chevrolet a CambiarComponente
   }
   const CambiarHonda = () => {
-    setCambiarComponente("Honda");
+    setCambiarComponente("Honda");// si da click al onclick de Honda entonces se setea Honda a CambiarComponente
   }
   const CambiarToyota = () => {
-    setCambiarComponente("Toyota");
+    setCambiarComponente("Toyota");// si da click al onclick de Toyota entonces se setea Toyota a CambiarComponente
   }
 
   return (
@@ -39,12 +41,16 @@ function Productos2() {
         <h6 className='estilosNameMarcas' onClick={CambiarHonda}>Honda</h6>
         <h6 className='estilosNameMarcas' onClick={CambiarToyota}>Toyota</h6> 
       </nav>
+      {/* botones con funciones onclick para que cuando se toque a setCambiarComponente se le setee otro valor
+      setCambiarComponente es CambiarComponente */}
       {CambiarComponente === "nissan" && <NissanMostrar />}
       {CambiarComponente === "ferrari" && <FerrariMostrar />}
       {CambiarComponente === "lambo" && <LamborghiniMostrar />}
       {CambiarComponente === "chevrolet" && <ChevroletMostrar />}
       {CambiarComponente === "Honda" && <HondaMostrar />}
       {CambiarComponente === "Toyota" && <ToyotaMostrar />}
+      {/* si CambiarComponente es nissan se muestra el compoente Nissan,  si CambiarComponente es ferrari se muestra el compoente ferrari
+      y asi consecutivamente con los otros componentes  */}
     </div>
   );
 }

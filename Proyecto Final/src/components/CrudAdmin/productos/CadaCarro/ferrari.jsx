@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import getFerrari from "../../../../services/Carros/Ferrari/getFerrari";
 import deleteFerrari from '../../../../services/Carros/Ferrari/deleteFerrari';
 import putFerrari from "../../../../services/Carros/Ferrari/putFerrari"
+import Swal from 'sweetalert2';
 import "./carros.css";
 function FerrariMostrar() {
   const [items, setCarros] = useState([]);
@@ -17,18 +18,40 @@ function FerrariMostrar() {
   const [EditExitoso, setEditExitoso] = useState('')
   useEffect(() => {
     datos();
-  }, []);
+  }, [EditExitoso,AbrirModal,items]);
   const datos = async () => {
     const datosFerrari = await getFerrari();
     setCarros(datosFerrari);
   };
   const eliminarFerrari = async (id) => {
-    if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
-      deleteFerrari(id)
-    } else {
-      return false
-    }
-    datos();
+    // if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
+    //   deleteFerrari(id)
+    // } else {
+    //   return false
+    // }
+    // datos();
+    Swal.fire({
+      title: "Estas seguro?",
+      text: "Seguro que no quieres revertirlo?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, eliminarlo!"
+    }).then(async (result) => {
+
+      if (result.isConfirmed) {
+        deleteFerrari(id)
+        Swal.fire({
+          title: "Eliminado!",
+          text: "El archivo fue eliminado!",
+          icon: "success"
+        });
+        datos();
+      } else {
+        console.log("Cancelado");
+      }
+    });
   }
   const enviarDatos = async () => {
     if (imageUrl.trim() === '' || Year.trim() === '' || Price.trim() === '') {

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import getLambo from "../../../../services/Carros/Lambo/getLambo";
 import deleteLambo from '../../../../services/Carros/Lambo/deleteLambo'
 import putLambo from '../../../../services/Carros/Lambo/putLambo'
+import Swal from 'sweetalert2';
 import "./carros.css";
 function LamborghiniMostrar() {
   const [items, setCarros] = useState([]);
@@ -18,20 +19,47 @@ function LamborghiniMostrar() {
 
   useEffect(() => {
     datos();
-  }, []);
+  }, [EditExitoso,AbrirModal,items]);
+
+
   const datos = async () => {
     const datosLambo = await getLambo();
     setCarros(datosLambo);
     console.log(datosLambo);
   };
+
+
   const eliminarLambo = async (id) => {
-    if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
-      deleteLambo(id)
-    } else {
-      return false
-    }
-    datos();
+    // if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
+    //   deleteLambo(id)
+    // } else {
+    //   return false
+    // }
+    // datos();
+    Swal.fire({
+      title: "Estas seguro?",
+      text: "Seguro que no quieres revertirlo?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, eliminarlo!"
+    }).then(async (result) => {
+
+      if (result.isConfirmed) {
+        deleteLambo(id)
+        Swal.fire({
+          title: "Eliminado!",
+          text: "El archivo fue eliminado!",
+          icon: "success"
+        });
+        datos();
+      } else {
+        console.log("Cancelado");
+      }
+    });
   }
+  
   const BotonEditar = (item) => {
     setID(item.id);
     setImageUrl(item.Url);

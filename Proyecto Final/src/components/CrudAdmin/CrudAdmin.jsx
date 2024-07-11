@@ -40,7 +40,9 @@ function CrudAdmin() {
             </div>
             <div className="divsAside3">
             <input type="button" onClick={mostrarProductos3} className="inp1" value="Mensajes / Correos" />
+            
             </div>
+            {/* estos inputs son para cambiar de componente  */}
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import deleteChevrolet from '../../../../services/Carros/Chevrolet/deleteChevrolet';
 import getChevrolet from "../../../../services/Carros/Chevrolet/getChevrolet";
 import "./carros.css";
+import Swal from 'sweetalert2';
 import putChevrolet from "../../../../services/Carros/Chevrolet/putChevrolet";
 function ChevroletMostrar() {
   const [items, setCarros] = useState([]); // items es
@@ -16,15 +17,37 @@ function ChevroletMostrar() {
   const [EditExitoso, setEditExitoso] = useState('')
   useEffect(() => {
     datos();
-  }, []);
+  }, [EditExitoso,AbrirModal,items]);
 
   const eliminarChevrolet = async (id) => {
-    if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
-      deleteChevrolet(id)
-    } else {
-      return false
-    }
-    datos();
+    // if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
+    //   deleteChevrolet(id)
+    // } else {
+    //   return false
+    // }
+    // datos();
+    Swal.fire({
+      title: "Estas seguro?",
+      text: "Seguro que no quieres revertirlo?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, eliminarlo!"
+    }).then(async (result) => {
+
+      if (result.isConfirmed) {
+        deleteChevrolet(id)
+        Swal.fire({
+          title: "Eliminado!",
+          text: "El archivo fue eliminado!",
+          icon: "success"
+        });
+        datos();
+      } else {
+        console.log("Cancelado");
+      }
+    });
   }
   const enviarDatos = async () => {
     if (imageUrl.trim() === '' || Year.trim() === '' || Price.trim() === '') {

@@ -5,12 +5,16 @@ import LamboComponente from '../../components/CrudAdmin/productos/componentesCar
 import ChevroletComponent from '../../components/CrudAdmin/productos/componentesCarros/ChevroletComponente'
 import HondaComponente from '../../components/CrudAdmin/productos/componentesCarros/HondaComponente'
 import ToyotaComponente from '../../components/CrudAdmin/productos/componentesCarros/ToyotaComponente'
+//llama todos los compoentes
 import { useEffect, useState } from "react"
 function Productos() {
   const [CambiarComponente, setCambiarComponente] = useState("nissan");
+  // CambiarComponente es la constante para cambiar componentes
+
     useEffect(() => {
     console.log("hola");
       },[])
+      
   return (
     <div className="grid-container">
       <div className="container-productos">

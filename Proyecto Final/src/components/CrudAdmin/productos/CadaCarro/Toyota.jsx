@@ -7,6 +7,7 @@ import getToyota from "../../../../services/Carros/Toyota/getToyota";
 import deleteToyota from "../../../../services/Carros/Toyota/deleteToyota";
 import putToyota from "../../../../services/Carros/Toyota/putToyota";
 import "./carros.css";
+import Swal from 'sweetalert2';
 // todos los llamados de exportaciones 
 function ToyotaMostrar() {
   const [items, setCarros] = useState([]);
@@ -21,7 +22,7 @@ function ToyotaMostrar() {
   useEffect(() => {
     datos();
     // el useEffect me permite recargar la funcion de datos() cada que existe un cambio
-  }, []);
+  }, [EditExitoso,AbrirModal,items]);
 
   const datos = async () => {
     const datosNissan = await getToyota();
@@ -31,15 +32,37 @@ function ToyotaMostrar() {
   };
 
   const eliminarToyota = async (id) => {// recibe el ID como parametro desde la funcion
-    if (confirm("Estas seguro que deseas eliminar este producto??") == true) {// usa un confirm para saber si realmente el usuario
-      // quiere eliminar el producto
-      deleteToyota(id); // le envia a el ID de el vehiculo que desea eliminar por parametro a el Api para eliminarlo
-    } else {
-      return false
-      // si no es posible eliminarlo entonces retorna un false
-    }
-    //cuando se toca el boton de eliminar vuelve a llamar a la funcion de datos para guardar los datos
-    datos();
+    // if (confirm("Estas seguro que deseas eliminar este producto??") == true) {// usa un confirm para saber si realmente el usuario
+    //   // quiere eliminar el producto
+    //   deleteToyota(id); // le envia a el ID de el vehiculo que desea eliminar por parametro a el Api para eliminarlo
+    // } else {
+    //   return false
+    //   // si no es posible eliminarlo entonces retorna un false
+    // }
+    // //cuando se toca el boton de eliminar vuelve a llamar a la funcion de datos para guardar los datos
+    // datos();
+    Swal.fire({
+      title: "Estas seguro?",
+      text: "Seguro que no quieres revertirlo?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, eliminarlo!"
+    }).then(async (result) => {
+
+      if (result.isConfirmed) {
+        deleteToyota(id);// le envia a el ID de el vehiculo que desea eliminar por parametro a el Api para eliminarlo
+        Swal.fire({
+          title: "Eliminado!",
+          text: "El archivo fue eliminado!",
+          icon: "success"
+        });
+        datos();
+      } else {
+        console.log("Cancelado");
+      }
+    });
   };
   const BotonEditar = (item) => {
     // la funcion de el boton de item

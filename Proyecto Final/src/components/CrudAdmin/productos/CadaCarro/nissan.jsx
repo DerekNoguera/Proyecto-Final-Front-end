@@ -1,6 +1,6 @@
 // La explicacion de este componente es la misma que la de el componente 
 //Toyota, el componente toyota esta en /componentes/CrudAdmin/CadaCarro/Toyotaa.jsx 
- 
+import Swal from 'sweetalert2';
  import { useEffect, useState } from "react";
 import getNissan from "../../../../services/Carros/Nissan/getNissan";
 import putNissan from "../../../../services/Carros/Nissan/PutNissan";
@@ -23,20 +23,46 @@ function NissanMostrar() {
 
   useEffect(() => {
     datos();
-  }, []);
+  }, [EditExitoso,AbrirModal,items]);
 
   const datos = async () => {
     const datosNissan = await getNissan();
     setCarros(datosNissan);
   };
 
+  // const eliminarNissan = async (id) => {
+
+  //   if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
+  //     await deleteNissan(id);
+  //   } else {
+  //     return false
+  //   }
+  //   datos();
+  // };
   const eliminarNissan = async (id) => {
-    if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
-      await deleteNissan(id);
-    } else {
-      return false
-    }
-    datos();
+  
+    Swal.fire({
+      title: "Estas seguro?",
+      text: "Seguro que no quieres revertirlo?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, eliminarlo!"
+    }).then(async (result) => {
+
+      if (result.isConfirmed) {
+        await deleteNissan(id);
+        Swal.fire({
+          title: "Eliminado!",
+          text: "El archivo fue eliminado!",
+          icon: "success"
+        });
+        datos();
+      } else {
+        console.log("Cancelado");
+      }
+    });
   };
   const BotonEditar = (item) => {
     setID(item.id);

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import getHonda from "../../../../services/Carros/Honda/getHonda";
 import deleteHonda from '../../../../services/Carros/Honda/deleteHonda'
 import putHonda from "../../../../services/Carros/Honda/putHonda";
+import Swal from 'sweetalert2';
 import "./carros.css";
 function HondaMostrar() {
   const [items, setCarros] = useState([]);
@@ -16,19 +17,41 @@ function HondaMostrar() {
   const [Honda, setHonda] = useState('Honda')
   const [EditExitoso, setEditExitoso] = useState('')
   useEffect(() => {
-    datos();
+    datos(EditExitoso,AbrirModal,items);
   }, []);
   const datos = async () => {
     const datosHonda = await getHonda();
     setCarros(datosHonda);
   };
   const eliminarHonda = async (id) => {
-    if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
-      deleteHonda(id)
-    } else {
-      return false
-    }
-    datos();
+    // if (confirm("Estas seguro que deseas eliminar este producto??") == true) {
+    //   deleteHonda(id)
+    // } else {
+    //   return false
+    // }
+    // datos();
+    Swal.fire({
+      title: "Estas seguro?",
+      text: "Seguro que no quieres revertirlo?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, eliminarlo!"
+    }).then(async (result) => {
+
+      if (result.isConfirmed) {
+        deleteHonda(id)
+        Swal.fire({
+          title: "Eliminado!",
+          text: "El archivo fue eliminado!",
+          icon: "success"
+        });
+        datos();
+      } else {
+        console.log("Cancelado");
+      }
+    });
   }
   const BotonEditar = (item) => {
     setID(item.id);
